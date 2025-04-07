@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./assets/library/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/regularprint.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/regularprint.css">
+   
+
+    <style>
+        /* product cart section */
+        #msc-product-cart-section {
+            margin-top: 4rem;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        /* cart summary */
+
+        .msc-order-summar {
+            border-left: 2px solid #ddd;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .msc-sub-toptal-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter';
+        }
+
+        .msc-sub-toptal-price p {
+            font-size: 14px;
+        }
+
+        .msc-summary-price-details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.244);
+            padding-bottom: 1rem;
+        }
+
+        .msc-sub-toptal-price .msc-text-muted {
+            font-size: 14px;
+        }
+
+        .msc-sub-toptal-price .msc-price {
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+
+        }
+
+        .msc-main-heading-order {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .msc-sub-toptal-price p {
+            margin: 0;
+        }
+
+        .btn-sign {
+            width: 100%;
+            background-color: #00a4e06b;
+            padding: 18px;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 1rem;
+            transform: skew(-10deg);
+            transition:.3s all;
+        }
+     .btn-sign:hover{
+        transform: skew(10deg);
+     }
+        .fa-arrow-down {
+            color: black;
+        }
+
+        /* cart */
+
+        .msc-product-cart-heading {
+            border-bottom: 1px solid black;
+        }
+
+        .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.338);
+            border-radius: 2px;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #00A3E0;
+            border-color: #00A3E0;
+        }
+
+        /* product cart section end */
+    </style>
+</head>
+
+<body>
+    <!-- product cart section -->
+    <div id="msc-product-cart-section">
+        <div class="msc-product-cart-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row d-flex justify-content-center align-items-cente">
+                            <div class="col">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="msc-product-cart-heading">
+                                            <tr>
+                                                <th scope="col" class="h5 text-left">Product</th>
+                                                <th scope="col" class="text-left">Price</th>
+                                                <th scope="col" class="text-left">Quantity</th>
+                                                <th scope="col" class="text-left">Subtotal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="./assets/images/category/-producttile-hoodies-001.png"
+                                                            class="img-fluid rounded-3" style="width: 120px;"
+                                                            alt="Book">
+                                                        <div class="flex-column ms-4">
+                                                            <p class="mb-2">Hoddies</p>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <td class="align-middle">
+                                                    <p class="mb-0" style="font-weight: 500;">$500</p>
+                                                </td>
+                                                <td class="align-middle text-center">
+                                                    <div class="d-flex flex-row">
+                                                        <button data-mdb-button-init data-mdb-ripple-init
+                                                            class="btn btn-link px-2"
+                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                            <i class="fas fa-minus" style="color: #00A3E0"></i>
+                                                        </button>
+
+                                                        <input type="number" value="1" class="form-control text-center" style="width: 60px;" />
+
+
+                                                        <button data-mdb-button-init data-mdb-ripple-init
+                                                            class="btn btn-link px-2"
+                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                            <i class="fas fa-plus" style="color: #00A3E0"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <p class="mb-0" style="font-weight: 500;">$500</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="msc-order-summar">
+                            <h4 class="msc-main-heading-order">Order Summary</h4>
+                            <div class="msc-summary-price-details">
+                                <div class="msc-sub-toptal-price">
+                                    <span class="msc-price">Subtotal:</span>
+                                    <span class="msc-price">$24.59</span>
+                                </div>
+                                <div class="msc-sub-toptal-price">
+                                    <p>Shipping <span class="msc-text-muted">(calculated at checkout)</p>
+                                    <span>-</span>
+                                </div>
+                                <div class="msc-sub-toptal-price">
+                                    <p>Tax <span class="msc-text-muted">(calculated at checkout)</span> </p>
+                                    <span>-</span>
+                                </div>
+                            </div>
+                            <div class="msc-sub-toptal-price p-1">
+                                <span class="msc-price">Total due</span>
+                                <span class="msc-price">$24.59</span>
+                            </div>
+                            <div class="msc-cuppon-code">
+                                <span>Have a code ?</span> <span><i class="fa-solid fa-angle-down"></i></span>
+                            </div>
+                            <button class="btn-sign"> <a href="./checkoutpage.html" style="text-decoration: none; color: black;"> Sign in and checkout</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

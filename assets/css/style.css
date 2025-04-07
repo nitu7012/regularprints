@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Patua+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins,Arial, sans-serif ;
+}
+@font-face {
+  font-family: msc-them-bold-font;
+  src: url("../fonts/Oswald/static/Oswald-Bold.ttf");
+}
+@font-face {
+  font-family: msc-them-regular-font;
+  src: url("../fonts/Oswald/static/Oswald-Regular.ttf");
+}
+
+:root {
+  --msc-theme-color-red: red;
+  --msc-theme-bold-font: msc-them-bold-font;
+  --msc-theme-regular-font: msc-them-regular-font;
+}
+
+/* header */
+header{
+  width: 100%;
+  overflow: hidden;
+  
+}
+/* logo header */
+.msc-header-logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  min-width: 1440px;
+}
+.logo {
+  height: 44px;
+}
+/* Search Box */
+.search-box {
+  position: relative;
+  width: 90%;  
+  max-width: 900px;  
+  margin: auto;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-right: 45px; 
+  font-size: 16px;;
+}
+
+.search-box .search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+}
+
+.search-box .search-btn img {
+  height: 18px;
+}
+
+/* Help Section */
+.help-section {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.help-section img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.help-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: black;
+}
+
+.help-number {
+  color: gray;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-links img {
+  height: 24px;
+}
+.nav-links span{
+  font-size: 14px;
+}
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .search-box {
+      max-width: 300px;
+  }
+
+  .nav-links {
+      gap: 15px;
+  }
+  .help-text{
+    display: none;
+  }
+  .nav-links span{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .help-section {
+      display: none;
+  }
+
+  .search-box {
+    display: block;
+  }
+.search-btn{
+  display: block;
+}
+  .nav-links {
+      font-size: 12px;
+  }
+
+  .nav-links img {
+      height: 18px;
+  }
+}
+/* nav bar */
+/* Default Styling */
+.msc-nav-list a{
+  text-decoration: none;
+  color: black;
+}
+.msc-nav-bar {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  background: #fff;
+  padding: 15px;
+  position: relative;
+  width: 100%;
+}
+.msc-nav-list {
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.megha-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 20px 6rem;
+  border-radius: 5px;
+  border-top: 1px solid black;
+  display: none; /* Pehle hidden rakho */
+  gap: 3rem;
+  z-index: 1000;
+}
+
+/* Sirf Business Cards ke hover hone par open ho */
+.msc-nav-list.nav-item:hover > .megha-menu {
+  display: flex;
+}
+.menu-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.menu-item {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 0;
+}
+.menu-image {
+  width: 400px;
+  height: 340px;
+  margin-top: 10px;
+}
+
+/* nav bar end */
+/* logo header and */
+/* header offer banner */
+/* Offer Banner */
+.msc-header-offer {
+  width: 100%;
+  height: 8vh;
+  background-color: #414e68;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.msc-header-offer-content {
+  display: inline-block;
+  animation: scroll-text 10s linear infinite;
+}
+
+/* Scrolling Animation */
+@keyframes scroll-text {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Text Styling */
+.msc-header-offer p {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  display: inline-block;
+  padding-right: 100%;
+}
+
+.msc-header-offer .highlight {
+  color: #f0bb0d;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.msc-header-offer .shop-now {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .msc-header-offer {
+      height: 6vh;
+  }
+
+  .msc-header-offer p {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .msc-header-offer {
+      height: 5vh;
+  }
+
+  .msc-header-offer p {
+      font-size: 16px;
+  }
+
+  .msc-header-offer-content {
+      animation-duration: 8s; /* Mobile pe speed badha di */
+  }
+}
+
+/* header offer banner end */
+/* header-end */
+
+/* hero */
+.msc-banner-card{
+  background-color:#414e68;
+  width: 40%; 
+  height: 350px;
+  padding: 2rem; 
+  border-radius: 10px; 
+  margin-left: 8rem; 
+  position:absolute;
+   bottom: 2.4rem;
+   top: 4rem;
+   margin-bottom: 20px;
+}
+.msc-banner-card h3{
+  color: white;
+  font-family:sans-serif;
+  font-size:2.6rem;
+  font-weight: 700;
+}
+.msc-banner-card p{
+  color: white;
+  font-size: 1.2rem;
+  padding:5px 0;
+}
+.msc-banner-card .btn{
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-top: 10px;
+}
+/* category */
+.msc-category-img {
+  width: 160px; /* Image ke width ke barabar */
+}
+
+.msc-category-img h4 {
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 16px;
+  text-wrap: balance; /* Auto adjust karega */
+}
+
+/* category end */
+/* favorite category */
+.msc-facorites-category-img-{
+  width: 16%;
+  height: 40vh;
+  position: relative;
+}
+.msc-facorites-category-img- h4{
+  overflow-wrap: break-word;
+  text-align: center!;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 0px 0 0px 0px;
+  background-color: gainsboro;
+  padding: 18px;
+}
+.msc-custom-category-img-{
+  width: 16%;
+  height: 40vh;
+  position: relative;
+}
+.msc-custom-category-img- h4{
+  overflow-wrap: break-word;
+  text-align: center!;
+  box-sizing: border-box;
+  font-size: 20px;
+  position: absolute;
+  font-weight: 600;
+  left: 0;
+  bottom: 4.3rem;
+  color: white;
+  width: 100%;
+  border-radius: 8px 8px 8px 8px;
+  background-color: rgba(24, 18, 18, 0.685);
+  padding: 18px;
+}
+.msc-shop-gifts-category-img-{
+  width: 24%;
+  height:55vh;
+  position: relative;
+  overflow: hidden;
+}
+.msc-shop-gifts-category-img- h4{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:rgb(14, 14, 53);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 20px 0 20px 0;
+  padding-right: 30px;
+}
+/* end */
+/* hero end */
+/* Offer section card 50%  */
+.msc-category-offer-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.msc-category-offer-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #5a1c1c;
+  margin-bottom: 30px;
+}
+
+.msc-category-offer-card {
+  background:rgba(207, 207, 215, 0.569);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.mcs-category-offer-card:hover {
+  transform: scale(1.05);
+}
+.msc-category-offer-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.msc-heading-main-text{
+position: relative;
+}
+.msc-heading-main-text::after{
+position: absolute;
+content:"" ;
+background-color: var(--msc-theme-color-red);
+width: auto;
+height: 20px;
+right: 0;
+}
+
+.msc-category-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #4d0f0f;
+}
+
+.msc-category-offer-rating {
+  color: green;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.msc-category-offer-offer {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.msc-category-offer-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5722;
+  margin: 10px 0;
+}
+
+.msc-category-offer-btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.msc-category-offer-btn-group .btn {
+  flex: 1;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Offer section card 50% end */
+
+/* tesmonial section */
+
+/* banner section */
+
+/* tesmonial section end */
+
+/* top card product */
+.product-card-container {
+  display: flex;
+  justify-content:flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 20px;
+}
+.product-card {
+  width: 300px;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+}
+.product-card:hover{
+  transition: all 0.5s ease-in-out;
+  background-color: #dfe8f7;
+}
+.product-card h5{
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgb(56, 37, 3);
+}
+.product-card p{
+  color: rgba(68, 44, 3, 0.695);
+  font-size: 14px;
+}
+.product-card .btn-custom {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #3d2806;
+  border: none;
+}
+
+/* top card product end */
+/* Footer */
+.footer {
+  background-color: #45526e;
+  padding: 40px 0 20px 0;
+  width: 100%;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+  color: #ffca00;
+}
+.contact-info div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 2px 10px 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.contact-info img {
+  width: 20px;
+  height: 20px;
+}
+.msc-footer-heading h5 {
+  color: #ffca00;
+}
+.msc-footer-social-icons img {
+  width: 20px;
+  height: 20px;
+}
+.msc-footer-social-icons a {
+  margin: 0 10px;
+  border: 1px solid white;
+  padding: 4px 6px 6px;
+  border-radius: 50%;
+  box-shadow: -4px -4px 4px -3px #dddddd;
+}
+.msc-footer-social-icons a:hover {
+  background-color: #ffca00;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .msc-footer-heading,
+  .text-md-start {
+    text-align: center !important;
+  }
+  .msc-footer-social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .msc-footer-social-icons a {
+    margin: 5px;
+  }
+}
+@media (min-width: 1902px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+/* Footer end */
+
+/* why-choose us */
+.finix-text h2 {
+    font-weight: 400;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .finix-text p {
+    color: #606060;
+    font-size: 15px;
+    line-height: 1.8rem;
+  }
+  .why-choose-us {
+    margin-top: 90px;
+  }
+  .why-choose-us .finix-text h2 {
+    font-weight: 500;
+  }
+  .why-choose-us .ct-btn {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 60px;
+    background: #fff;
+    position: absolute;
+    top: 77%;
+    right: 43%;
+  }
+  .why-choose-us .ct-btn::before {
+    content: "";
+    height: 85px;
+    width: 85px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #D4AF37;
+    border-radius: 50%;
+    animation: choose 1.6s ease-out infinite;
+  }
+  @keyframes choose{
+    0%,30%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+  }
+  .why-choose-us .ct-btn a{
+    color: #00A3E0;
+  }
+  .why-choose-us .feature-box {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .why-choose-us .feature-box:hover {
+    transform: translateY(-10px);
+  }
+  .why-choose-us .feature-box:hover .fbc-btn{
+    background: #e7b40c;
+    color: #fff;
+  }
+  .why-choose-us .feature-box::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    background: #00A3E0;
+    border-radius: 50%;
+    
+  }
+  
+  .why-choose-us .fbc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    position: relative;
+    transition: .4s;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(165, 54, 54, 0.19);
+  }
+  .why-choose-us .bi{
+      width: 100%;
+      height: 100%;
+      padding-top: 12px;
+  }
+  .active-feature{
+    margin-top: -30px;
+  }
+  .why-choose-us .finix-text{
+    position: relative;
+  }
+  .fbc-btn i{
+      font-size: 40px;
+      margin-bottom: 10px;
+  
+  }
+/* why-choose us end */
+
+
+

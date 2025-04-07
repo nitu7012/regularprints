@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regulaprints</title>
+    <link rel="stylesheet" href="./assets/css/regularprint.css">
+    <link rel="stylesheet" href="./assets/library/bootstrap/css/bootstrap.min.css">
+    <!-- Font  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header id="msc-header-section">
+        <!-- Top header -->
+        <section id="msc-top-header" class="d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="msc-top-header-wrapper">
+                            <div class="text-center border-bottom p-2">
+                                <span class="top-header-text">
+                                    Websites by RegularPrints &nbsp; | &nbsp; Corporate Pricing &nbsp; |
+                                    &nbsp; Reseller Program &nbsp; | &nbsp; RegularPrintsCreate
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Top header end -->
+        <!-- logo header -->
+
+        <!-- Mobile & Tablet Header -->
+        <section class="d-flex d-md-none p-2 justify-content-between align-items-center">
+            <!-- Left: Justify + Logo -->
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn p-0" onclick="toggleSidebar()">
+                    <i class="fas fa-bars fs-4"></i>
+                </button>
+                <img src="./assets/images/logo.png" alt="Logo" style="height: 30px;">
+            </div>
+
+            <!-- Center: Search Icon -->
+            <div>
+                <button class="btn p-0">
+                    <img src="./assets/svgicon/searc.svg" alt="Search" style="height: 20px;">
+                </button>
+            </div>
+
+            <!-- Right: Icons -->
+            <div class="d-flex align-items-center gap-3">
+               <a href=""> <img src="./assets/svgicon/bag.svg" alt="Bag" style="height: 20px;"></a>
+                <a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="User" style="height: 20px;"></a>
+            </div>
+        </section>
+
+        <!-- Desktop Header (As-is) -->
+        <section id="msc-logo-header-section" class="d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="msc-logo-header d-flex align-items-center">
+                        <div class="col-md-2">
+                            <div class="msc-header-logo-wrapper">
+                                <img src="./assets/images/logo.png" alt="VistaPrint Logo" class="logo">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="msc-search-bar-wrapper">
+                                <div class="search-box">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <button class="search-btn">
+                                        <img src="./assets/svgicon/searc.svg" alt="Search">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="msc-header-links-wrapper">
+                                <ul class="nav-links d-flex align-items-center">
+                                    <li><a href="#"><img src="./assets/svgicon/question.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                    <li><a href="#"><img src="./assets/svgicon/folder.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                    <li><a href="#"><img src="./assets/svgicon/heart.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                    <li><a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                    <li><a href="#"><img src="./assets/svgicon/bag.svg" alt="" class="msc-svg-icon"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="msc-header-links-wrapper">
+                                <ul class="nav-links d-flex align-items-center">
+                                    <li><a href="#"><img src="./assets/svgicon/blackimg/insta-black.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                    <li><a href="#"><img src="./assets/svgicon/blackimg/facebook.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                    <li><a href="#"><img src="./assets/svgicon/blackimg/twitter-black.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                    <li><a href="#"><img src="./assets/svgicon/blackimg/printerest-black.svg" alt=""
+                                                class="msc-svg-icon"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Sidebar Menu -->
+        <div id="mobileSidebar" style="
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1050;
+    padding: 1rem;
+    transition: left 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 6px;
+    overflow-y: auto;
+  ">
+            <button class="btn-close float-end" onclick="toggleSidebar()"></button>
+            <h5 class="mt-4">Menu</h5>
+            <ul class="list-unstyled mt-3 msc-mobile-responsive-text">
+                <li class="mb-3"><a href=""><img src="./assets/svgicon/question.svg" style="height: 20px;"> Help</a></li>
+                <li class="mb-3"><a href=""><img src="./assets/svgicon/folder.svg" style="height: 20px;"> Folder</a></li>
+                <hr>
+                <li class="mb-2">Social</li>
+                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;"> Instagram</a>
+                </li>
+                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;"> Facebook</a></li>
+                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg" style="height: 18px;"> Twitter</a>
+                </li>
+                <li><img src="./assets/svgicon/blackimg/printerest-black.svg" style="height: 18px;"> Pinterest</li>
+                <hr>
+                <li class="mb-2">Categories</li>
+                <li class="mb-2"><a href="#">View All</a></li>
+                <li class="mb-2"><a href="#">Visiting Cards</a></li>
+                <li class="mb-2"><a href="#">Stationery, Letterheads & Notebooks</a></li>
+                <li class="mb-2"><a href="#">Personalised Pens</a></li>
+                <li class="mb-2"><a href="#">Stamps and Ink</a></li>
+                <li class="mb-2"><a href="#">Signs, Posters & Marketing Materials</a></li>
+                <li class="mb-2"><a href="#">Labels, Stickers & Packaging</a></li>
+                <li class="mb-2"><a href="#">Clothing, Caps & Bags</a></li>
+                <li class="mb-2"><a href="#">Mugs, Albums & Gifts</a></li>
+                <li class="mb-2"><a href="#">Bulk Orders</a></li>
+                <li class="mb-2"><a href="#">Custom Drinkware</a></li>
+                <li class="mb-2"><a href="#">Custom Polo T-shirts</a></li>
+            </ul>
+        </div>
+
+
+        <!-- logo header-end -->
+
+        <!-- nav header -->
+        <section id="msc-nav-header-section" class="d-none d-md-block">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="msc-nav-header-wrapper">
+                            <ul class="mas-nav-section">
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">View All</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Visiting Cards</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Stationery,Letterheads & Notebooks</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Personalised Pens</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Stamps and Ink</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Signs,Posters & Marketing Materials</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Labels,Stickers & Packaging</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline"> Clothing,Caps & Bags</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Mugs,Albums & gifts</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Bulk Orders</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Drinkware</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Polo T-shirts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- nav header end -->
+    </header>
+    <!-- header end -->
+
+
+    <!-- Top header Offer section start -->
+    <section id="msc-top-header-offer-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="msc-top-header-offer-wrapper">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <p class="text-center m-0">$50 OFF order $150+ | Code : <b>BMSM</b> | Ends March 31
+                                        <span><a href="#" class="msc-shop-now">Shop now</a></span>
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="text-center m-0">$50 OFF order $150+ | Code: <b>BMSM</b> | Ends March 31
+                                        <span><a href="#" class="msc-shop-now">Shop now</a></span>
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="text-center m-0">$50 OFF order $150+ | Code: <b>BMSM</b> | Ends March 31
+                                        <span><a href="#" class="msc-shop-now">Shop now</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                           
+                        </div>
+    
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+    <!-- Top header offer section end -->
+
+
+    <!-- Banner Section start -->
+    <section id="msc-banner-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="msc-banner-wrapper">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./assets/images/hero7.jpeg" alt="" class="msc-banner-img">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./assets/images/hero6.jpeg" alt="" class="msc-banner-img">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./assets/images/hero4.png" alt="" class="msc-banner-img">
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+    <!-- Banner section end -->
+
+
+    <!-- Explore all category start-->
+    <section id="msc-explore-all-category-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="msc-category-heading text-center">
+                        <h4 class="msc-heading-main-text">Explore All Categories</h4>
+                    </div>
+                </div>
+               
+                <div class="col-md-2">
+                    <div class="msc-category-item-wrapper">
+                        <a href="#" class="msc-categories-anchor-tag">
+                            <div class="msc-category-img-wrapper">
+                                <img src="./assets/images/category/deals.png" alt="" class="msc-categoy-img">
+                                <p class="msc-category-paragraph">Deals</p>
+                            </div>
+                        </a>
+    
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="msc-category-item-wrapper">
+                        <a href="./all-product.html" class="msc-categories-anchor-tag">
+                            <div class="msc-category-img-wrapper">
+                                <img src="./assets/images/category/category1.png" alt="" class="msc-categoy-img">
+                                <p class="msc-category-paragraph">Business Cards</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+
+                </div>
+                <div class="col-md-2">
+                    <div class="msc-category-item-wrapper">
+                        <a href="#" class="msc-categories-anchor-tag">
+                            <div class="msc-category-img-wrapper">
+                                <img src="./assets/images/category/premium-postcard.png" alt="" class="msc-categoy-img">
+                                <p class="msc-category-paragraph">Postcards & Prints Advertising</p>
+                            </div>
+                        </a>
+                    </div>
+                   
+
+                </div>
+                <div class="col-md-2">
+                    <div class="msc-category-item-wrapper">
+                        <a href="#" class="msc-categories-anchor-tag">
+                            <div class="msc-category-img-wrapper">
+                                <img src="./assets/images/category/vinylbanners.png" alt="" class="msc-categoy-img">
+                                <p class="msc-category-paragraph">Signs, Banners & Posters</p>
+                            </div>
+                        </a>
+    
+                    </div>
+                   
+                </div>
+                <div class="col-md-2">
+                    <div class="msc-category-item-wrapper">
+                        <a href="#" class="msc-categories-anchor-tag">
+                            <div class="msc-category-img-wrapper">
+                                <img src="./assets/images/category/cut-stic.png" alt="" class="msc-categoy-img">
+                                <p class="msc-category-paragraph">Labels & Stickers</p>
+                            </div>
+                        </a>
+                    </div>
+                   
+
+                </div>
+                <div class="col-md-2">
+                    <div class="msc-category-item-wrapper">
+                        <a href="#" class="msc-categories-anchor-tag">
+                            <div class="msc-category-img-wrapper">
+                                <img src="./assets/images/category/Clothing.png" alt="" class="msc-categoy-img">
+                                <p class="msc-category-paragraph">Clothing & Bags</p>
+                            </div>
+                        </a>
+                    </div>
+                   
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Explore all category end -->
+
+    <!-- Product card start -->
+    <section id="msc-category-offer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="msc-category-heading text-center">
+                        <h4 class="msc-heading-main-text">Best Popular  Products</h4>
+                    </div>
+                </div>
+    
+                <!-- Product Card Start -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="msc-popular-pruduct-card">
+                        <div class="msc-popular-pruduct-other-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="msc-popular-pruduct-image_container">
+                            <img src="./assets/images/business-cards-home.jpg" alt="">
+                        </div>
+                        <div class="msc-popular-pruduct-price">
+                            <span>$299</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px;">50 starting at $11.99</p>
+                        <div class="msc-popular-pruduct-category-name">
+                            <p style="margin: 0; font-size: 14px;"><u>Premium Business Cards</u></p>
+                        </div>
+                        <div class="msc-popular-pruduct-title">
+                            <span>Business Card</span>
+                        </div>
+                        <div class="msc-popular-pruduct-action">
+                            <button class="msc-popular-pruduct-cart-button1">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Buy Now</span>
+                            </button>
+                            <button class="msc-popular-pruduct-cart-button">
+                                <a href="./Carts.html" style="text-decoration: none; color: white;" >  <i class="fas fa-cart-plus"></i>
+                                    <span>Add to cart</span></a>
+    
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card End -->
+    
+                <!-- Repeat the above card for each product (copy-paste 3 times) -->
+    
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="msc-popular-pruduct-card">
+                        <div class="msc-popular-pruduct-other-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="msc-popular-pruduct-image_container">
+                            <img src="./assets/images/business-cards-home.jpg" alt="">
+                        </div>
+                        <div class="msc-popular-pruduct-price">
+                            <span>$299</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px;">50 starting at $11.99</p>
+                        <div class="msc-popular-pruduct-category-name">
+                            <p style="margin: 0; font-size: 14px;"><u>Premium Business Cards</u></p>
+                        </div>
+                        <div class="msc-popular-pruduct-title">
+                            <span>Business Card</span>
+                        </div>
+                        <div class="msc-popular-pruduct-action">
+                            <button class="msc-popular-pruduct-cart-button1">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Buy Now</span>
+                            </button>
+                            <button class="msc-popular-pruduct-cart-button">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add to cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="msc-popular-pruduct-card">
+                        <div class="msc-popular-pruduct-other-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="msc-popular-pruduct-image_container">
+                            <img src="./assets/images/business-cards-home.jpg" alt="">
+                        </div>
+                        <div class="msc-popular-pruduct-price">
+                            <span>$299</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px;">50 starting at $11.99</p>
+                        <div class="msc-popular-pruduct-category-name">
+                            <p style="margin: 0; font-size: 14px;"><u>Premium Business Cards</u></p>
+                        </div>
+                        <div class="msc-popular-pruduct-title">
+                            <span>Business Card</span>
+                        </div>
+                        <div class="msc-popular-pruduct-action">
+                            <button class="msc-popular-pruduct-cart-button1">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Buy Now</span>
+                            </button>
+                            <button class="msc-popular-pruduct-cart-button">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add to cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="msc-popular-pruduct-card">
+                        <div class="msc-popular-pruduct-other-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="msc-popular-pruduct-image_container">
+                            <img src="./assets/images/business-cards-home.jpg" alt="">
+                        </div>
+                        <div class="msc-popular-pruduct-price">
+                            <span>$299</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px;">50 starting at $11.99</p>
+                        <div class="msc-popular-pruduct-category-name">
+                            <p style="margin: 0; font-size: 14px;"><u>Premium Business Cards</u></p>
+                        </div>
+                        <div class="msc-popular-pruduct-title">
+                            <span>Business Card</span>
+                        </div>
+                        <div class="msc-popular-pruduct-action">
+                            <button class="msc-popular-pruduct-cart-button1">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Buy Now</span>
+                            </button>
+                            <button class="msc-popular-pruduct-cart-button">
+                                <i class="fas fa-cart-plus"></i>
+                                <span>Add to cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat ends -->
+    
+            </div>
+        </div>
+    </section>
+    
+    <!-- product card end-->
+
+    <!-- Shop gifts, mementos and more  start -->
+    <section id="msc-special-moment-section">
+        <div class="msc-spcial-moment-section-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="msc-category-heading text-center">
+                            <h4 class="msc-heading-main-text">Our Special Moment Products</h4>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="msc-special-moment-card">
+                            <a href="#" class="msc-categories-anchor-tag">
+                                <div class="msc-popular-product-wrapper">
+                                    <div class="msc-spcial-moment-img-container">
+                                        <img src="./assets/images/category/march1.png" alt="Business Card"
+                                            class="msc-special-mement-img">
+                                    </div>
+                                    <div class="msc-special-moment-text">
+                                        <p class="msc-category-paragraph">Invitations & Announcements</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="msc-special-moment-card">
+                            <a href="#" class="msc-categories-anchor-tag">
+                                <div class="msc-popular-product-wrapper">
+                                    <div class="msc-spcial-moment-img-container">
+                                        <img src="./assets/images/category/march2.png" alt="Business Card"
+                                            class="msc-special-mement-img">
+                                    </div>
+                                    <div class="msc-special-moment-text">
+                                        <p class="msc-category-paragraph">Tabletop Decor</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                       
+                    </div>
+    
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="msc-special-moment-card">
+                            <a href="#" class="msc-categories-anchor-tag">
+                                <div class="msc-popular-product-wrapper">
+                                    <div class="msc-spcial-moment-img-container">
+                                        <img src="./assets/images/category/march3.png" alt="Business Card"
+                                            class="msc-special-mement-img">
+                                    </div>
+                                    <div class="msc-special-moment-text">
+                                        <p class="msc-category-paragraph">Wall Art</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                       
+                    </div>
+    
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="msc-special-moment-card">
+                            <a href="#" class="msc-categories-anchor-tag">
+                                <div class="msc-popular-product-wrapper">
+                                    <div class="msc-spcial-moment-img-container">
+                                        <img src="./assets/images/category/march4.png" alt="Business Card"
+                                            class="msc-special-mement-img">
+                                    </div>
+                                    <div class="msc-special-moment-text">
+                                        <p class="msc-category-paragraph">Photo Books</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                       
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Shop gifts, mementos and more  end -->
+
+<!-- top Sale Product card start-->
+<section id="msc-top-sale-product-section">
+    <div class="msc-top-sale-product-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="msc-category-heading text-center">
+                <h4 class="msc-heading-main-text">Most Popular Selling Products</h4>
+            </div>
+          </div>
+  
+          <!-- Repeat this block for each product -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="msc-top-sale-product-card">
+              <div class="msc-top-sale-product-card-other-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="msc-top-sale-product-card-image_container">
+                <img src="./assets/images/business-cards-home.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span style="font-size: 14px; color: red;"><del> $288</del> </span>
+                <span class="msc-top-sale-product-card-price">$100</span>
+              </div>
+              <div class="msc-top-sale-product-card-title">
+                <span>Standard</span>
+              </div>
+              <div class="msc-top-sale-product-card-category-name" style="margin: 0; font-size: 12px;">
+                <span>Rectangular dimensions give you a recognizable look.</span>
+              </div>
+              <div class="msc-top-sale-product-card-rating">
+                <span style="color: rgb(109, 105, 105); font-size: 14px;">4.5</span>
+                <div class="msc-top-sale-product-star-icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span style="color: rgb(106, 100, 100); font-size: 14px;">(63,454)</span>
+              </div>
+              <div class="msc-top-sale-product-card-action">
+                <button class="msc-top-sale-product-card-button1">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+                <button class="msc-top-sale-product-card-button">
+                  <i class="fas fa-cart-plus"></i>
+                  <span>Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="msc-top-sale-product-card">
+              <div class="msc-top-sale-product-card-other-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="msc-top-sale-product-card-image_container">
+                <img src="./assets/images/business-cards-home.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span style="font-size: 14px; color: red;"><del> $288</del> </span>
+                <span class="msc-top-sale-product-card-price">$100</span>
+              </div>
+              <div class="msc-top-sale-product-card-title">
+                <span>Standard</span>
+              </div>
+              <div class="msc-top-sale-product-card-category-name" style="margin: 0; font-size: 12px;">
+                <span>Rectangular dimensions give you a recognizable look.</span>
+              </div>
+              <div class="msc-top-sale-product-card-rating">
+                <span style="color: rgb(109, 105, 105); font-size: 14px;">4.5</span>
+                <div class="msc-top-sale-product-star-icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span style="color: rgb(106, 100, 100); font-size: 14px;">(63,454)</span>
+              </div>
+              <div class="msc-top-sale-product-card-action">
+                <button class="msc-top-sale-product-card-button1">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+                <button class="msc-top-sale-product-card-button">
+                  <i class="fas fa-cart-plus"></i>
+                  <span>Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="msc-top-sale-product-card">
+              <div class="msc-top-sale-product-card-other-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="msc-top-sale-product-card-image_container">
+                <img src="./assets/images/business-cards-home.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span style="font-size: 14px; color: red;"><del> $288</del> </span>
+                <span class="msc-top-sale-product-card-price">$100</span>
+              </div>
+              <div class="msc-top-sale-product-card-title">
+                <span>Standard</span>
+              </div>
+              <div class="msc-top-sale-product-card-category-name" style="margin: 0; font-size: 12px;">
+                <span>Rectangular dimensions give you a recognizable look.</span>
+              </div>
+              <div class="msc-top-sale-product-card-rating">
+                <span style="color: rgb(109, 105, 105); font-size: 14px;">4.5</span>
+                <div class="msc-top-sale-product-star-icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span style="color: rgb(106, 100, 100); font-size: 14px;">(63,454)</span>
+              </div>
+              <div class="msc-top-sale-product-card-action">
+                <button class="msc-top-sale-product-card-button1">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+                <button class="msc-top-sale-product-card-button">
+                  <i class="fas fa-cart-plus"></i>
+                  <span>Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="msc-top-sale-product-card">
+              <div class="msc-top-sale-product-card-other-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="msc-top-sale-product-card-image_container">
+                <img src="./assets/images/business-cards-home.jpg" alt="">
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span style="font-size: 14px; color: red;"><del> $288</del> </span>
+                <span class="msc-top-sale-product-card-price">$100</span>
+              </div>
+              <div class="msc-top-sale-product-card-title">
+                <span>Standard</span>
+              </div>
+              <div class="msc-top-sale-product-card-category-name" style="margin: 0; font-size: 12px;">
+                <span>Rectangular dimensions give you a recognizable look.</span>
+              </div>
+              <div class="msc-top-sale-product-card-rating">
+                <span style="color: rgb(109, 105, 105); font-size: 14px;">4.5</span>
+                <div class="msc-top-sale-product-star-icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <span style="color: rgb(106, 100, 100); font-size: 14px;">(63,454)</span>
+              </div>
+              <div class="msc-top-sale-product-card-action">
+                <button class="msc-top-sale-product-card-button1">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+                <button class="msc-top-sale-product-card-button">
+                  <i class="fas fa-cart-plus"></i>
+                  <span>Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat Ends -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Top sale product end -->
+
+
+    <!-- Tools to help build your business start -->
+    <section id="msc-create-business-section">
+        <div class="msc-create-business-sectiono-wrapper">
+          <div class="container">
+            <!-- Section Heading -->
+            <div class="row">
+              <div class="col-12">
+                <div class="msc-category-heading text-center">
+                  <h4 class="msc-heading-main-text">Tools to help build your business</h4>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Responsive Card Grid -->
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="msc-create-business-main-card-wrapper">
+                  <a href="#" class="text-decoration-none">
+                    <div class="box">
+                      <img class="rounded-sm img-fluid" src="./assets/images/category/create2.png" alt="Product Design" />
+                      <h3 class="name">Product Design</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+      
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="msc-create-business-main-card-wrapper">
+                  <a href="#" class="text-decoration-none">
+                    <div class="box">
+                      <img class="rounded-sm img-fluid" src="./assets/images/category/create1.png" alt="Custom Logos" />
+                      <h3 class="name">Custom Logos</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+      
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="msc-create-business-main-card-wrapper">
+                  <a href="#" class="text-decoration-none">
+                    <div class="box">
+                      <img class="rounded-sm img-fluid" src="./assets/images/category/create3.png" alt="Business Website" />
+                      <h3 class="name">Custom Business Website</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+      
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="msc-create-business-main-card-wrapper">
+                  <a href="#" class="text-decoration-none">
+                    <div class="box">
+                      <img class="rounded-sm img-fluid" src="./assets/images/category/create4.png" alt="Social Media" />
+                      <h3 class="name">Social Media</h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+     <!-- Tools to help build your business end -->
+      
+    <!-- Tesmonial section start-->
+    <section id="msc-testimonial-section">
+        <div class="container">
+          <!-- Heading Row -->
+          <div class="row">
+            <div class="col-12">
+              <div class="msc-category-heading text-center">
+                <h4 class="msc-heading-main-text">Our Client Say</h4>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Testimonial Cards -->
+          <div class="row">
+            <!-- Repeatable Testimonial Card -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="msc-testmonial-card">
+                <div class="msc-testmonial-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="msc-testmonial-infos">
+                  <p class="msc-testmonial-date-time">2 days ago</p>
+                  <p class="msc-testmonial-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur.
+                  </p>
+                </div>
+                <div class="msc-tesmonial-author">— John Doe</div>
+              </div>
+            </div>
+      
+            <!-- Repeat same card for more testimonials -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="msc-testmonial-card">
+                <div class="msc-testmonial-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="msc-testmonial-infos">
+                  <p class="msc-testmonial-date-time">3 days ago</p>
+                  <p class="msc-testmonial-description">
+                    Awesome service and excellent support team. Highly recommend!
+                  </p>
+                </div>
+                <div class="msc-tesmonial-author">— Jane Smith</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="msc-testmonial-card">
+                  <div class="msc-testmonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="msc-testmonial-infos">
+                    <p class="msc-testmonial-date-time">3 days ago</p>
+                    <p class="msc-testmonial-description">
+                      Awesome service and excellent support team. Highly recommend!
+                    </p>
+                  </div>
+                  <div class="msc-tesmonial-author">— Jane Smith</div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="msc-testmonial-card">
+                  <div class="msc-testmonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="msc-testmonial-infos">
+                    <p class="msc-testmonial-date-time">3 days ago</p>
+                    <p class="msc-testmonial-description">
+                      Awesome service and excellent support team. Highly recommend!
+                    </p>
+                  </div>
+                  <div class="msc-tesmonial-author">— Jane Smith</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- Tesmonial section end -->
+
+    <!-- why choose us -->
+    <section id="msc-why-choose-us-section">
+            <div class="container">
+                <div class="row">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-sm-12">
+                                <div class="msc-faq-section-head">
+                                    <div class="msc-category-heading text-center">
+                                        <h4 class="msc-heading-main-text">Why Choose Us</h4>
+                                      </div>                                    <p>When you choose us, you'll feel the benefit of 10 years' experience of Web Development. Because we know the digital world and we know that how to handle it. With working knowledge of online, SEO and social media.</p>
+                                </div>
+                            </div>
+                            <div class="msc-faq-section-card-body">
+                                
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                              <div class="msc-faq-item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span>
+                                <h6>Modern Design</h6>
+                                <p>We use latest technology for the latest world because we know the demand of peoples.</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                              <div class="msc-faq-item"> <span class="icon feature_box_col_two"><i class="fa fa-anchor"></i></span>
+                                <h6>Creative Design</h6>
+                                <p>We are always creative and and always lisen our costomers and we mix these two things and make.</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                              <div class="msc-faq-item"> <span class="icon feature_box_col_three"><i class="fa fa-hourglass-half"></i></span>
+                                <h6>24 x 7 User Support</h6>
+                                <p>If our customer has any problem and any query we are always happy to help then.</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                              <div class="msc-faq-item"> <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span>
+                                <h6>Business Growth</h6>
+                                <p>Everyone wants to live on top of the mountain, but all the happiness and growth occurs while you're climbing it</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                              <div class="msc-faq-item"> <span class="icon feature_box_col_five"><i class="fa fa-upload"></i></span>
+                                <h6>Market Strategy</h6>
+                                <p>Holding back technology to preserve broken business models is like allowing blacksmiths to veto the internal.</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                              <div class="msc-faq-item"> <span class="icon feature_box_col_six"><i class="fa fa-camera"></i></span>
+                                <h6>Affordable cost</h6>
+                                <p>Love is a special word, and I use it only when I mean it. You say the word too much and it becomes cheap.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                
+            </div>
+        
+    </section>
+    <!-- why choose us end -->
+     <!-- faq section -->
+     <section id="msc-faq-main-section">
+        <div class="msc-faq-main-section-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="msc-category-heading text-center">
+                    <h4 class="msc-heading-main-text">Frequently Asked Questions</h4>
+                </div>
+               
+              </div>
+      
+              <!-- Image Section: Hidden on tablet and mobile -->
+              <div class="col-lg-7 d-none d-lg-block">
+                <div class="msc-faq-imase-container">
+                  <div class="msc-faq-img-main">
+                    <img src="./assets/images/faq.jpg" alt="FAQ Image" class="msc-faq-img" />
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Accordion Section -->
+              <div class="col-12 col-md-12 col-lg-5">
+                <div class="msc-faq-question-section-wrapper">
+                  <div class="accordion" id="sleekAccordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <span style="margin-right: 10px; color:#00A3E0;"><i class="fa-solid fa-list-check"></i></span>
+                          Features
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#sleekAccordion">
+                        <div class="accordion-body">
+                          Discover our product's cutting-edge features designed to enhance your productivity and
+                          streamline your workflow.
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <span style="margin-right: 10px; color:#00A3E0;"><i class="fa-solid fa-tags"></i></span>
+                          Pricing
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#sleekAccordion">
+                        <div class="accordion-body">
+                          Explore our flexible pricing options tailored to fit your needs, from individual users to
+                          enterprise solutions.
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <span style="margin-right: 10px; color:#00A3E0;"><i class="fa-solid fa-headset"></i></span>
+                          Support
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#sleekAccordion">
+                        <div class="accordion-body">
+                          Get assistance from our dedicated support team, available 24/7 to help you with any
+                          questions or issues you may encounter.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!-- Accordion col end -->
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+        <!-- faq section -->
+    <!-- Footer section start -->
+    <footer id="msc-footer-section" class="footer">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center text-md-start">
+              <h5>
+                <img src="./assets/images/logo.png" alt="Vistaprint" width="250" class="img-fluid" />
+              </h5>
+              <p style="font-size: 12px; color: white;">You Need It. We Print It. You Love It.</p>
+              <p style="font-size: 12px; color: white;">Regulaprints is Here to Help Every Step Of The Way.</p>
+            </div>
+      
+            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+              <h5>Our Company</h5>
+              <p><a href="#">About Us</a></p>
+              <p><a href="#">Careers</a></p>
+              <p><a href="#">Ambassador Program</a></p>
+              <p><a href="#">For Investors</a></p>
+              <p><a href="#">For Media</a></p>
+              <p><a href="#">Sustainability</a></p>
+              <p><a href="#">Do Not Sell or Share My Info</a></p>
+            </div>
+      
+            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+              <h5>Let Us Help</h5>
+              <p><a href="#">My Account</a></p>
+              <p><a href="#">Shipping</a></p>
+              <p><a href="#">Contact & Support</a></p>
+              <p><a href="#">All Products</a></p>
+              <p><a href="#">Ideas & Advice</a></p>
+              <p><a href="#">Reseller Program</a></p>
+              <p><a href="#">Accessibility</a></p>
+            </div>
+      
+            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+              <h5>Contact Information</h5>
+              <div class="contact-info">
+                <div>
+                  <img src="./assets/svgicon/phone.svg" alt="" /> <span>USA Phone: (513) 334-9393</span>
+                </div>
+                <div>
+                  <img src="./assets/svgicon/whatsp.svg" alt="" /> <span>WhatsApp: (513) 334-9393</span>
+                </div>
+                <div>
+                  <img src="./assets/svgicon/email.svg" alt="" /> <span>anthony@reeflci.com</span>
+                </div>
+                <div>
+                  <img src="./assets/svgicon/location.svg" alt="" />
+                  <span>Caribbean Sea, Placencia, Belize</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Footer Bottom Section -->
+          <section class="p-2 pt-0 text-center border-top pt-2 mt-4">
+            <div class="row d-flex align-items-center justify-content-between">
+              <div class="col-md-6 text-white text-md-start text-center mb-2 mb-md-0">
+                © 2025 Copyright:
+                <a class="text-white" href="#">regulaprints.com</a>
+              </div>
+              <div class="col-md-6 d-flex justify-content-center gap-1 text-white">
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+      
+    <!-- Footer section end -->
+    <!-- add bootstrap js -->
+    <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+        }
+    </script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 6,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 6,
+        },
+      },
+    });
+  </script>
+  
+</body>
+
+</html>

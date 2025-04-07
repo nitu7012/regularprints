@@ -1,0 +1,54 @@
+1. Primary Color: Deep Navy Blue
+Purpose: Represents trust, professionalism, and reliability—core values for a printing company.
+HEX: #1C2526
+RGB: (28, 37, 38)
+CMYK: (90%, 80%, 75%, 70%)
+Usage: Use this as the primary background color for headers, footers, or large sections of the website. It’s a dark, neutral tone that pairs well with other colors and ensures text readability.
+
+2. Secondary Color: Rich Gold
+Purpose: Adds a touch of luxury and creativity, reflecting the high-quality output of printing services. Gold also symbolizes precision and excellence.
+HEX: #D4AF37
+RGB: (212, 175, 55)
+CMYK: (15%, 25%, 85%, 5%)
+Usage: Use for accents, buttons, icons, or highlights. This color can also be used for text on dark backgrounds (like the navy blue) to create a premium feel.
+
+3. Accent Color: Crisp White
+Purpose: Represents clarity, cleanliness, and simplicity—qualities associated with high-quality printing. It also ensures a balanced, airy design.
+HEX: #FFFFFF
+RGB: (255, 255, 255)
+CMYK: (0%, 0%, 0%, 0%)
+Usage: Use as the primary background color for most sections of the website to create a clean canvas. It also works well for text on darker backgrounds.
+
+4. Accent Color: Soft Gray
+Purpose: Adds a neutral tone for balance, ensuring the design doesn’t feel too heavy with the darker navy and gold.
+HEX: #E5E7EB
+RGB: (229, 231, 235)
+CMYK: (5%, 3%, 0%, 8%)
+Usage: Use for secondary backgrounds, borders, or subtle dividers between sections. It’s a light gray that complements the navy and gold without overpowering them.
+
+5. Accent Color: Vibrant Cyan
+Purpose: Reflects the CMYK printing process (Cyan, Magenta, Yellow, Black) and adds a pop of color to represent creativity and the vibrancy of printed materials.
+HEX: #00A3E0
+RGB: (0, 163, 224)
+CMYK: (85%, 25%, 0%, 0%)
+Usage: Use sparingly for call-to-action buttons, links, or icons to draw attention. This color ties into the printing theme by referencing the cyan ink used in the CMYK process.
+Design Application Tips
+
+Typography: Use white (#FFFFFF) or light gray (#E5E7EB) text on the navy blue (#1C2526) background for readability. For gold (#D4AF37) backgrounds, use navy blue or white text to maintain contrast.
+Buttons and CTAs: Use the vibrant cyan (#00A3E0) for buttons like “Get a Quote” or “Upload Your Design,” with white or navy text inside. Add a hover effect by switching to a slightly darker shade of cyan (e.g., #008BBF).
+
+Icons and Accents: Use the rich gold (#D4AF37) for icons, borders, or decorative elements to add a premium touch.
+Consistency Across Mediums: The CMYK values provided ensure these colors can be accurately reproduced in print for branding materials like business cards or brochures. For web use, the HEX and RGB values will ensure consistency on screens.
+
+1.All Category
+2.user Dashboard
+3.
+
+2.Edit Why Choose Us? -completed
+3.Edit Frequently Asked Questions -completed
+4.Edit Best Popular Product -completed
+5.Footer section - completed
+6-Most Popular Selling Products -completed
+
+1.create Checkout page- completed
+2.Shopping Cart -completed
