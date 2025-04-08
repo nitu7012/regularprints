@@ -347,13 +347,7 @@
     padding: 4px;
     border-radius: 4px;
 }
-@media (max-width: 476px) {
-    .msc-popular-pruduct-card {
-      width: 80% !important;
-      margin: 0 auto;
-      display: block;
-    }
-  }
+
   
 /* Popular product card end */
 
@@ -374,6 +368,17 @@
     border-radius: 1rem;
    box-shadow: rgba(92, 91, 91, 0.05) 0px 6px 24px 0px, rgba(111, 111, 111, 0.08) 0px 0px 0px 1px;
 }
+@media (max-width: 768px) {
+    .msc-popular-pruduct-card{
+      width: 80% !important;
+      margin-top: 1rem;
+      margin: 0 auto;
+      display: block;
+      gap: 20px !important;
+      margin-top: 1rem;
+    }
+   
+  }
 
 .msc-popular-pruduct-image_container {
     overflow: hidden;
