@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
-   
+
 
     <style>
         /* product cart section */
         #msc-product-cart-section {
             margin-top: 4rem;
             font-family: 'Roboto', sans-serif;
-           margin-bottom: 2rem;
+            margin-bottom: 2rem;
         }
 
         /* cart summary */
@@ -78,11 +78,13 @@
             font-weight: 700;
             margin-top: 1rem;
             transform: skew(-10deg);
-            transition:.3s all;
+            transition: .3s all;
         }
-     .btn-sign:hover{
-        transform: skew(10deg);
-     }
+
+        .btn-sign:hover {
+            transform: skew(10deg);
+        }
+
         .fa-arrow-down {
             color: black;
         }
@@ -104,7 +106,14 @@
             box-shadow: 0 0 0 2px #00A3E0;
             border-color: #00A3E0;
         }
-
+        @media (max-width: 768px) {
+    .table td {
+      padding: 0.5rem 0.3rem;
+    }
+    .table img {
+      width: 80px !important;
+    }
+  }
         /* product cart section end */
     </style>
 </head>
@@ -129,11 +138,11 @@
                 </div>
             </div>
         </section>
-    
-    
+
+
         <!-- Top header end -->
         <!-- logo header -->
-    
+
         <!-- Mobile & Tablet Header -->
         <section class="d-flex d-md-none p-2 justify-content-between align-items-center">
             <!-- Left: Justify + Logo -->
@@ -143,21 +152,21 @@
                 </button>
                 <img src="./assets/images/logo.png" alt="Logo" style="height: 30px;">
             </div>
-    
+
             <!-- Center: Search Icon -->
             <div>
                 <button class="btn p-0">
                     <img src="./assets/svgicon/searc.svg" alt="Search" style="height: 20px;">
                 </button>
             </div>
-    
+
             <!-- Right: Icons -->
             <div class="d-flex align-items-center gap-3">
-               <a href=""> <img src="./assets/svgicon/bag.svg" alt="Bag" style="height: 20px;"></a>
+                <a href=""> <img src="./assets/svgicon/bag.svg" alt="Bag" style="height: 20px;"></a>
                 <a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="User" style="height: 20px;"></a>
             </div>
         </section>
-    
+
         <!-- Desktop Header (As-is) -->
         <section id="msc-logo-header-section" class="d-none d-md-block">
             <div class="container-fluid">
@@ -212,7 +221,7 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- Mobile Sidebar Menu -->
         <div id="mobileSidebar" style="
     position: fixed;
@@ -230,14 +239,19 @@
             <button class="btn-close float-end" onclick="toggleSidebar()"></button>
             <h5 class="mt-4">Menu</h5>
             <ul class="list-unstyled mt-3 msc-mobile-responsive-text">
-                <li class="mb-3"><a href=""><img src="./assets/svgicon/question.svg" style="height: 20px;"> Help</a></li>
-                <li class="mb-3"><a href=""><img src="./assets/svgicon/folder.svg" style="height: 20px;"> Folder</a></li>
+                <li class="mb-3"><a href=""><img src="./assets/svgicon/question.svg" style="height: 20px;"> Help</a>
+                </li>
+                <li class="mb-3"><a href=""><img src="./assets/svgicon/folder.svg" style="height: 20px;"> Folder</a>
+                </li>
                 <hr>
                 <li class="mb-2">Social</li>
-                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;"> Instagram</a>
+                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;">
+                        Instagram</a>
                 </li>
-                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;"> Facebook</a></li>
-                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg" style="height: 18px;"> Twitter</a>
+                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;">
+                        Facebook</a></li>
+                <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg"
+                            style="height: 18px;"> Twitter</a>
                 </li>
                 <li><img src="./assets/svgicon/blackimg/printerest-black.svg" style="height: 18px;"> Pinterest</li>
                 <hr>
@@ -256,10 +270,10 @@
                 <li class="mb-2"><a href="#">Custom Polo T-shirts</a></li>
             </ul>
         </div>
-    
-    
+
+
         <!-- logo header-end -->
-    
+
         <!-- nav header -->
         <section id="msc-nav-header-section" class="d-none d-md-block">
             <div class="container-fluid ">
@@ -269,26 +283,32 @@
                             <ul class="mas-nav-section">
                                 <li class="msc-nav-list"><a href="#" class="hover-underline">View All</a></li>
                                 <li class="msc-nav-list"><a href="#" class="hover-underline">Visiting Cards</a></li>
-                                <li class="msc-nav-list"><a href="#" class="hover-underline">Stationery,Letterheads & Notebooks</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Stationery,Letterheads &
+                                        Notebooks</a></li>
                                 <li class="msc-nav-list"><a href="#" class="hover-underline">Personalised Pens</a></li>
                                 <li class="msc-nav-list"><a href="#" class="hover-underline">Stamps and Ink</a></li>
-                                <li class="msc-nav-list"><a href="#" class="hover-underline">Signs,Posters & Marketing Materials</a></li>
-                                <li class="msc-nav-list"><a href="#" class="hover-underline">Labels,Stickers & Packaging</a></li>
-                                <li class="msc-nav-list"><a href="#" class="hover-underline"> Clothing,Caps & Bags</a></li>
-                                <li class="msc-nav-list"><a href="#" class="hover-underline">Mugs,Albums & gifts</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Signs,Posters & Marketing
+                                        Materials</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Labels,Stickers &
+                                        Packaging</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline"> Clothing,Caps & Bags</a>
+                                </li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Mugs,Albums & gifts</a>
+                                </li>
                                 <li class="msc-nav-list"><a href="#" class="hover-underline">Bulk Orders</a></li>
                                 <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Drinkware</a></li>
-                                <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Polo T-shirts</a></li>
+                                <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Polo T-shirts</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </section>
         <!-- nav header end -->
     </header>
-      
+
     <!-- Footer section end -->
     <!-- add bootstrap js -->
     <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
@@ -299,31 +319,31 @@
         }
     </script>
 
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 6,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-        },
-        480: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 4,
-        },
-        1024: {
-          slidesPerView: 6,
-        },
-      },
-    });
-  </script>
-    <script src="./assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                480: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 6,
+                },
+            },
+        });
+    </script>
+    
     <!-- product cart section -->
     <div id="msc-product-cart-section">
         <div class="msc-product-cart-wrapper">
@@ -333,56 +353,59 @@
                         <div class="row d-flex justify-content-center align-items-cente">
                             <div class="col">
                                 <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class="msc-product-cart-heading">
-                                            <tr>
-                                                <th scope="col" class="h5 text-left">Product</th>
-                                                <th scope="col" class="text-left">Price</th>
-                                                <th scope="col" class="text-left">Quantity</th>
-                                                <th scope="col" class="text-left">Subtotal</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="./assets/images/category/-producttile-hoodies-001.png"
-                                                            class="img-fluid rounded-3" style="width: 120px;"
-                                                            alt="Book">
-                                                        <div class="flex-column ms-4">
-                                                            <p class="mb-2">Hoddies</p>
-                                                        </div>
-                                                    </div>
-                                                </th>
-                                                <td class="align-middle">
-                                                    <p class="mb-0" style="font-weight: 500;">$500</p>
-                                                </td>
-                                                <td class="align-middle text-center">
-                                                    <div class="d-flex flex-row">
-                                                        <button data-mdb-button-init data-mdb-ripple-init
-                                                            class="btn btn-link px-2"
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                            <i class="fas fa-minus" style="color: #00A3E0"></i>
-                                                        </button>
-
-                                                        <input type="number" value="1" class="form-control text-center" style="width: 60px;" />
-
-
-                                                        <button data-mdb-button-init data-mdb-ripple-init
-                                                            class="btn btn-link px-2"
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                            <i class="fas fa-plus" style="color: #00A3E0"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                                <td class="align-middle">
-                                                    <p class="mb-0" style="font-weight: 500;">$500</p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                  <table class="table align-middle">
+                                    <thead class="msc-product-cart-heading">
+                                      <tr class="d-none d-md-table-row">
+                                        <th scope="col" class="h5 text-left">Product</th>
+                                        <th scope="col" class="text-left">Price</th>
+                                        <th scope="col" class="text-left">Quantity</th>
+                                        <th scope="col" class="text-left">Subtotal</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="d-block d-md-table-row border-bottom pb-3 pb-md-0">
+                                        <!-- Product -->
+                                        <td class="d-flex d-md-table-cell flex-column flex-md-row align-items-center gap-3">
+                                          <img src="./assets/images/category/-producttile-hoodies-001.png" class="img-fluid rounded-3"
+                                            style="width: 100px; max-width: 100%;" alt="Hoodie">
+                                          <div>
+                                            <p class="mb-0 fw-semibold">Hoodies</p>
+                                          </div>
+                                        </td>
+                              
+                                        <!-- Price -->
+                                        <td class="text-start text-md-left">
+                                          <p class="mb-2 fw-semibold d-md-none">Price</p>
+                                          <p class="mb-0">$500</p>
+                                        </td>
+                              
+                                        <!-- Quantity -->
+                                        <td class="text-start text-md-center">
+                                          <p class="mb-2 fw-semibold d-md-none">Quantity</p>
+                                          <div class="d-flex flex-row justify-content-start justify-content-md-center align-items-center">
+                                            <button class="btn btn-link px-2"
+                                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                              <i class="fas fa-minus" style="color: #00A3E0"></i>
+                                            </button>
+                                            <input type="number" value="1" class="form-control text-center mx-1" style="width: 60px;" />
+                                            <button class="btn btn-link px-2"
+                                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                              <i class="fas fa-plus" style="color: #00A3E0"></i>
+                                            </button>
+                                          </div>
+                                        </td>
+                              
+                                        <!-- Subtotal -->
+                                        <td class="text-start text-md-left">
+                                          <p class="mb-2 fw-semibold d-md-none">Subtotal</p>
+                                          <p class="mb-0 fw-semibold">$500</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </div>
-                            </div>
+                              </div>
+                              
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -409,89 +432,96 @@
                             <div class="msc-cuppon-code">
                                 <span>Have a code ?</span> <span><i class="fa-solid fa-angle-down"></i></span>
                             </div>
-                            <button class="btn-sign"> <a href="./checkoutpage.html" style="text-decoration: none; color: black;"> Sign in and checkout</a></button>
+                            <button class="btn-sign"> <a href="./checkoutpage.html"
+                                    style="text-decoration: none; color: black;"> Sign in and checkout</a></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-       
-        <!-- faq section -->
+
+    <!-- faq section -->
     <!-- Footer section start -->
     <footer id="msc-footer-section" class="footer">
         <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center text-md-start">
-              <h5>
-                <img src="./assets/images/logo.png" alt="Vistaprint" width="250" class="img-fluid" />
-              </h5>
-              <p style="font-size: 12px; color: white;">You Need It. We Print It. You Love It.</p>
-              <p style="font-size: 12px; color: white;">Regulaprints is Here to Help Every Step Of The Way.</p>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
-              <h5>Our Company</h5>
-              <p><a href="#">About Us</a></p>
-              <p><a href="#">Careers</a></p>
-              <p><a href="#">Ambassador Program</a></p>
-              <p><a href="#">For Investors</a></p>
-              <p><a href="#">For Media</a></p>
-              <p><a href="#">Sustainability</a></p>
-              <p><a href="#">Do Not Sell or Share My Info</a></p>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
-              <h5>Let Us Help</h5>
-              <p><a href="#">My Account</a></p>
-              <p><a href="#">Shipping</a></p>
-              <p><a href="#">Contact & Support</a></p>
-              <p><a href="#">All Products</a></p>
-              <p><a href="#">Ideas & Advice</a></p>
-              <p><a href="#">Reseller Program</a></p>
-              <p><a href="#">Accessibility</a></p>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
-              <h5>Contact Information</h5>
-              <div class="contact-info">
-                <div>
-                  <img src="./assets/svgicon/phone.svg" alt="" /> <span>USA Phone: (513) 334-9393</span>
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 col-sm-12 text-center text-md-start">
+                    <h5>
+                        <img src="./assets/images/logo.png" alt="Vistaprint" width="250" class="img-fluid" />
+                    </h5>
+                    <p style="font-size: 12px; color: white;">You Need It. We Print It. You Love It.</p>
+                    <p style="font-size: 12px; color: white;">Regulaprints is Here to Help Every Step Of The Way.</p>
                 </div>
-                <div>
-                  <img src="./assets/svgicon/whatsp.svg" alt="" /> <span>WhatsApp: (513) 334-9393</span>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+                    <h5>Our Company</h5>
+                    <p><a href="#">About Us</a></p>
+                    <p><a href="#">Careers</a></p>
+                    <p><a href="#">Ambassador Program</a></p>
+                    <p><a href="#">For Investors</a></p>
+                    <p><a href="#">For Media</a></p>
+                    <p><a href="#">Sustainability</a></p>
+                    <p><a href="#">Do Not Sell or Share My Info</a></p>
                 </div>
-                <div>
-                  <img src="./assets/svgicon/email.svg" alt="" /> <span>anthony@reeflci.com</span>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+                    <h5>Let Us Help</h5>
+                    <p><a href="#">My Account</a></p>
+                    <p><a href="#">Shipping</a></p>
+                    <p><a href="#">Contact & Support</a></p>
+                    <p><a href="#">All Products</a></p>
+                    <p><a href="#">Ideas & Advice</a></p>
+                    <p><a href="#">Reseller Program</a></p>
+                    <p><a href="#">Accessibility</a></p>
                 </div>
-                <div>
-                  <img src="./assets/svgicon/location.svg" alt="" />
-                  <span>Caribbean Sea, Placencia, Belize</span>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+                    <h5>Contact Information</h5>
+                    <div class="contact-info">
+                        <div>
+                            <img src="./assets/svgicon/phone.svg" alt="" /> <span>USA Phone: (513) 334-9393</span>
+                        </div>
+                        <div>
+                            <img src="./assets/svgicon/whatsp.svg" alt="" /> <span>WhatsApp: (513) 334-9393</span>
+                        </div>
+                        <div>
+                            <img src="./assets/svgicon/email.svg" alt="" /> <span>anthony@reeflci.com</span>
+                        </div>
+                        <div>
+                            <img src="./assets/svgicon/location.svg" alt="" />
+                            <span>Caribbean Sea, Placencia, Belize</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-      
-          <!-- Footer Bottom Section -->
-          <section class="p-2 pt-0 text-center border-top pt-2 mt-4">
-            <div class="row d-flex align-items-center justify-content-between">
-              <div class="col-md-6 text-white text-md-start text-center mb-2 mb-md-0">
-                © 2025 Copyright:
-                <a class="text-white" href="#">regulaprints.com</a>
-              </div>
-              <div class="col-md-6 d-flex justify-content-center gap-1 text-white">
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-          </section>
+
+            <!-- Footer Bottom Section -->
+            <section class="p-2 pt-0 text-center border-top pt-2 mt-4">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-md-6 text-white text-md-start text-center mb-2 mb-md-0">
+                        © 2025 Copyright:
+                        <a class="text-white" href="#">regulaprints.com</a>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center gap-1 text-white">
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-google"></i></a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
         </div>
-      </footer>
-      
+    </footer>
+
     <!-- Footer section end -->
     <!-- add bootstrap js -->
     <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
@@ -502,30 +532,30 @@
         }
     </script>
 
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 6,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-        },
-        480: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 4,
-        },
-        1024: {
-          slidesPerView: 6,
-        },
-      },
-    });
-  </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                },
+                480: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 6,
+                },
+            },
+        });
+    </script>
     <script src="./assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
