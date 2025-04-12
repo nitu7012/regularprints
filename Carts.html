@@ -17,7 +17,7 @@
         #msc-product-cart-section {
             margin-top: 4rem;
             font-family: 'Roboto', sans-serif;
-
+           margin-bottom: 2rem;
         }
 
         /* cart summary */
@@ -129,11 +129,11 @@
                 </div>
             </div>
         </section>
-
-
+    
+    
         <!-- Top header end -->
         <!-- logo header -->
-
+    
         <!-- Mobile & Tablet Header -->
         <section class="d-flex d-md-none p-2 justify-content-between align-items-center">
             <!-- Left: Justify + Logo -->
@@ -143,21 +143,21 @@
                 </button>
                 <img src="./assets/images/logo.png" alt="Logo" style="height: 30px;">
             </div>
-
+    
             <!-- Center: Search Icon -->
             <div>
                 <button class="btn p-0">
                     <img src="./assets/svgicon/searc.svg" alt="Search" style="height: 20px;">
                 </button>
             </div>
-
+    
             <!-- Right: Icons -->
             <div class="d-flex align-items-center gap-3">
                <a href=""> <img src="./assets/svgicon/bag.svg" alt="Bag" style="height: 20px;"></a>
                 <a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="User" style="height: 20px;"></a>
             </div>
         </section>
-
+    
         <!-- Desktop Header (As-is) -->
         <section id="msc-logo-header-section" class="d-none d-md-block">
             <div class="container-fluid">
@@ -212,7 +212,7 @@
                 </div>
             </div>
         </section>
-
+    
         <!-- Mobile Sidebar Menu -->
         <div id="mobileSidebar" style="
     position: fixed;
@@ -226,7 +226,7 @@
     transition: left 0.3s ease;
     box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 6px;
     overflow-y: auto;
-  ">
+    ">
             <button class="btn-close float-end" onclick="toggleSidebar()"></button>
             <h5 class="mt-4">Menu</h5>
             <ul class="list-unstyled mt-3 msc-mobile-responsive-text">
@@ -256,10 +256,10 @@
                 <li class="mb-2"><a href="#">Custom Polo T-shirts</a></li>
             </ul>
         </div>
-
-
+    
+    
         <!-- logo header-end -->
-
+    
         <!-- nav header -->
         <section id="msc-nav-header-section" class="d-none d-md-block">
             <div class="container-fluid ">
@@ -282,12 +282,48 @@
                             </ul>
                         </div>
                     </div>
-
+    
                 </div>
             </div>
         </section>
         <!-- nav header end -->
     </header>
+      
+    <!-- Footer section end -->
+    <!-- add bootstrap js -->
+    <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+        }
+    </script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 6,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 6,
+        },
+      },
+    });
+  </script>
+    <script src="./assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- product cart section -->
     <div id="msc-product-cart-section">
         <div class="msc-product-cart-wrapper">
