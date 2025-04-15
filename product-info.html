@@ -26,7 +26,10 @@
   font-weight: 500;
 }
 
-
+.msc-btn-add:hover{
+   border-color: #0084b3 !important;
+   color: black;
+}
     #msc-product-details-section {
       margin-top: 4rem;
     }
@@ -106,14 +109,6 @@
       font-weight: 500;
     }
 
-    .btn-icon {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      border-radius: 5px;
-    }
-    /* product infor */
     
     #msc-product-details-section {
       font-family: 'Roboto', sans-serif;
@@ -173,7 +168,29 @@
 .breadcrumb-item + .breadcrumb-item::before {
   color: white;
 }
-
+@media (max-width: 768px) {
+  .fw-bold{
+    font-size: 16px !important;
+  }
+  .small, small {
+    font-size: .8rem !important;
+}
+.text-muted{
+  font-size: 12px !important;
+}
+.msc-size-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px !important;
+}
+a{
+  font-size: 10px !important;
+}
+p{
+  font-size: 12px;
+}
+        }
   </style>
 </head>
 <body>
@@ -438,10 +455,10 @@ overflow-y: auto;
           </div>
 
           <!-- Size Options -->
-          <div class="mb-3">
+          <div class="mb-3 ">
             <span class="fw-bold">Size:</span>
             <span class="ms-2">M</span>
-            <div class="mt-2">
+            <div class="mt-2 msc-size-details">
               <button class="msc-size-btn">XS</button>
               <button class="msc-size-btn">S</button>
               <button class="msc-size-btn">M</button>
@@ -456,18 +473,17 @@ overflow-y: auto;
             <button class="btn btn-outline-secondary me-2">-</button>
             <span class="px-2">1</span>
             <button class="btn btn-outline-secondary me-3">+</button>
-            <button class="btn btn-outline-dark btn-icon me-2">
-              <a href="" style="text-decoration: none; color: white;">
-                <i class="fas fa-cart-plus"></i> Add to Cart
-              </a>
-              
-            </button>
-            <button class="btn msc-btn-buy-now btn-icon">
-              <a href="./Carts.html" style="text-decoration: none; color: white;">
-                <i class="fas fa-shopping-bag"></i> Buy Now
-              </a>
-              
-            </button>
+            <div class="msc-popular-pruduct-action">
+              <button class="msc-popular-pruduct-cart-button1">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Buy Now</span>
+              </button>
+              <button class="msc-popular-pruduct-cart-button">
+                <a href="./Carts.html" style="text-decoration: none; color: white;"> <i class="fas fa-cart-plus"></i>
+                  <span>Add to cart</span></a>
+
+              </button>
+            </div>
           </div>
 
           <!-- Wishlist & Share -->
