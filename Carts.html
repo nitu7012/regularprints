@@ -244,6 +244,8 @@
     overflow-y: auto;
     ">
             <button class="btn-close float-end" onclick="toggleSidebar()"></button>
+            <img src="./assets/images/logo.png" alt="Logo" style="height: 30px;">
+
             <h5 class="mt-4">Menu</h5>
             <ul class="list-unstyled mt-3 msc-mobile-responsive-text">
                 <li class="mb-3"><a href=""><img src="./assets/svgicon/question.svg" style="height: 20px;"> Help</a>
@@ -533,12 +535,7 @@
     <script src="./assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- add bootstrap js -->
     <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
-        }
-    </script>
+   
 
     <script>
         var swiper = new Swiper(".mySwiper", {

@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Page</title>
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     body {
       font-family: 'Roboto', sans-serif;
     }
-    .hero-section {
-    background: url('./assets/images/bg.png') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    position: relative;
-}
-.breadcrumb .breadcrumb-item a,
-.breadcrumb .breadcrumb-item.active {
-  color: white !important;
-  font-weight: 500;
-}
 
+    .hero-section {
+      background: url('./assets/images/bg.png') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .breadcrumb .breadcrumb-item a,
+    .breadcrumb .breadcrumb-item.active {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .msc-btn-add:hover {
+      border-color: #0084b3 !important;
+      color: black;
+    }
 
     #msc-product-details-section {
       margin-top: 4rem;
@@ -106,15 +113,7 @@
       font-weight: 500;
     }
 
-    .btn-icon {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      border-radius: 5px;
-    }
-    /* product infor */
-    
+
     #msc-product-details-section {
       font-family: 'Roboto', sans-serif;
       margin-top: 1rem;
@@ -166,34 +165,100 @@
       font-weight: 500;
       font-size: 16px;
     }
+
     .breadcrumb {
-  --bs-breadcrumb-divider: '/';
-}
+      --bs-breadcrumb-divider: '/';
+    }
 
-.breadcrumb-item + .breadcrumb-item::before {
-  color: white;
-}
+    .breadcrumb-item+.breadcrumb-item::before {
+      color: white;
+    }
 
+    @media (max-width: 768px) {
+      .msc-cat{
+        padding: 20px 10px !important;
+      }
+      .msc-product-img{
+        height: 250px !important;
+      } 
+      .msc-info{
+        height: 220px !important;
+        width: 100% !important;
+      }
+     
+      .hero-section {
+        padding: 30px 0 !important;
+      }
+      .msc-table td, .msc-table th{
+        font-size: 12px !important;
+      }
+      .small,
+      small {
+        font-size: .8rem !important;
+      }
+
+      .text-muted {
+        font-size: 12px !important;
+      }
+
+      .msc-size-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px !important;
+      }
+
+      a {
+        font-size: 10px !important;
+      }
+
+      p {
+        font-size: 12px;
+      }
+     
+      #msc-product-details-section{
+        padding: 0 10px !important;
+        margin: 0 !important;
+      }
+      .msc-section-title{
+        font-size: 14px !important;
+      }
+      .msc-product-des{
+        font-size: 12px !important;
+      }
+      .msc-icon-text .fa-solid {
+          font-size: 12px !important;
+      }
+      .msc-color-code{
+        display: flex;
+      }
+      .msc-color-dot{
+        height: 16px !important;
+        width: 16px !important;
+      }
+     
+    }
   </style>
 </head>
+
 <body>
   <header id="msc-header-section">
     <!-- Top header -->
     <section id="msc-top-header" class="d-none d-md-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="msc-top-header-wrapper">
-                        <div class="text-center border-bottom p-2">
-                            <span class="top-header-text">
-                                Websites by RegularPrints &nbsp; | &nbsp; Corporate Pricing &nbsp; |
-                                &nbsp; Reseller Program &nbsp; | &nbsp; RegularPrintsCreate
-                            </span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="msc-top-header-wrapper">
+              <div class="text-center border-bottom p-2">
+                <span class="top-header-text">
+                  Websites by RegularPrints &nbsp; | &nbsp; Corporate Pricing &nbsp; |
+                  &nbsp; Reseller Program &nbsp; | &nbsp; RegularPrintsCreate
+                </span>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
 
@@ -202,81 +267,77 @@
 
     <!-- Mobile & Tablet Header -->
     <section class="d-flex d-md-none p-2 justify-content-between align-items-center">
-        <!-- Left: Justify + Logo -->
-        <div class="d-flex align-items-center gap-2">
-            <button class="btn p-0" onclick="toggleSidebar()">
-                <i class="fas fa-bars fs-4"></i>
-            </button>
-            <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo" style="height: 30px;"></a>
-        </div>
+      <!-- Left: Justify + Logo -->
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn p-0" onclick="toggleSidebar()">
+          <i class="fas fa-bars fs-4"></i>
+        </button>
+        <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo" style="height: 30px;"></a>
+      </div>
 
-        <!-- Center: Search Icon -->
-        <div>
-            <button class="btn p-0">
-                <img src="./assets/svgicon/searc.svg" alt="Search" style="height: 20px;">
-            </button>
-        </div>
+      <!-- Center: Search Icon -->
+      <div>
+        <button class="btn p-0">
+          <img src="./assets/svgicon/searc.svg" alt="Search" style="height: 20px;">
+        </button>
+      </div>
 
-        <!-- Right: Icons -->
-        <div class="d-flex align-items-center gap-3">
-            <a href=""> <img src="./assets/svgicon/bag.svg" alt="Bag" style="height: 20px;"></a>
-            <a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="User" style="height: 20px;"></a>
-        </div>
+      <!-- Right: Icons -->
+      <div class="d-flex align-items-center gap-3">
+        <a href=""> <img src="./assets/svgicon/bag.svg" alt="Bag" style="height: 20px;"></a>
+        <a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="User" style="height: 20px;"></a>
+      </div>
     </section>
 
     <!-- Desktop Header (As-is) -->
     <section id="msc-logo-header-section" class="d-none d-md-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="msc-logo-header d-flex align-items-center">
-                    <div class="col-md-2">
-                        <div class="msc-header-logo-wrapper">
-                            <img src="./assets/images/logo.png" alt="VistaPrint Logo" class="logo">
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="msc-search-bar-wrapper">
-                            <div class="search-box">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <button class="search-btn">
-                                    <img src="./assets/svgicon/searc.svg" alt="Search">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="msc-header-links-wrapper">
-                            <ul class="nav-links d-flex align-items-center">
-                                <li><a href="#"><img src="./assets/svgicon/question.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                                <li><a href="#"><img src="./assets/svgicon/folder.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                                <li><a href="#"><img src="./assets/svgicon/heart.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                                <li><a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                                <li><a href="#"><img src="./assets/svgicon/bag.svg" alt="" class="msc-svg-icon"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="msc-header-links-wrapper">
-                            <ul class="nav-links d-flex align-items-center">
-                                <li><a href="#"><img src="./assets/svgicon/blackimg/insta-black.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                                <li><a href="#"><img src="./assets/svgicon/blackimg/facebook.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                                <li><a href="#"><img src="./assets/svgicon/blackimg/twitter-black.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                                <li><a href="#"><img src="./assets/svgicon/blackimg/printerest-black.svg" alt=""
-                                            class="msc-svg-icon"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="msc-logo-header d-flex align-items-center">
+            <div class="col-md-2">
+              <div class="msc-header-logo-wrapper">
+                <img src="./assets/images/logo.png" alt="VistaPrint Logo" class="logo">
+              </div>
             </div>
+            <div class="col-md-5">
+              <div class="msc-search-bar-wrapper">
+                <div class="search-box">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <button class="search-btn">
+                    <img src="./assets/svgicon/searc.svg" alt="Search">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="msc-header-links-wrapper">
+                <ul class="nav-links d-flex align-items-center">
+                  <li><a href="#"><img src="./assets/svgicon/question.svg" alt="" class="msc-svg-icon"></a></li>
+                  <li><a href="#"><img src="./assets/svgicon/folder.svg" alt="" class="msc-svg-icon"></a></li>
+                  <li><a href="#"><img src="./assets/svgicon/heart.svg" alt="" class="msc-svg-icon"></a></li>
+                  <li><a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="" class="msc-svg-icon"></a></li>
+                  <li><a href="#"><img src="./assets/svgicon/bag.svg" alt="" class="msc-svg-icon"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="msc-header-links-wrapper">
+                <ul class="nav-links d-flex align-items-center">
+                  <li><a href="#"><img src="./assets/svgicon/blackimg/insta-black.svg" alt="" class="msc-svg-icon"></a>
+                  </li>
+                  <li><a href="#"><img src="./assets/svgicon/blackimg/facebook.svg" alt="" class="msc-svg-icon"></a>
+                  </li>
+                  <li><a href="#"><img src="./assets/svgicon/blackimg/twitter-black.svg" alt=""
+                        class="msc-svg-icon"></a></li>
+                  <li><a href="#"><img src="./assets/svgicon/blackimg/printerest-black.svg" alt=""
+                        class="msc-svg-icon"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Mobile Sidebar Menu -->
@@ -293,39 +354,42 @@ transition: left 0.3s ease;
 box-shadow: rgba(0, 0, 0, 0.2) 2px 0px 6px;
 overflow-y: auto;
 ">
-        <button class="btn-close float-end" onclick="toggleSidebar()"></button>
-        <h5 class="mt-4">Menu</h5>
-        <ul class="list-unstyled mt-3 msc-mobile-responsive-text">
-            <li class="mb-3"><a href=""><img src="./assets/svgicon/question.svg" style="height: 20px;"> Help</a>
-            </li>
-            <li class="mb-3"><a href=""><img src="./assets/svgicon/folder.svg" style="height: 20px;"> Folder</a>
-            </li>
-            <hr>
-            <li class="mb-2">Social</li>
-            <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;">
-                    Instagram</a>
-            </li>
-            <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;">
-                    Facebook</a></li>
-            <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg"
-                        style="height: 18px;"> Twitter</a>
-            </li>
-            <li><img src="./assets/svgicon/blackimg/printerest-black.svg" style="height: 18px;"> Pinterest</li>
-            <hr>
-            <li class="mb-2">Categories</li>
-            <li class="mb-2"><a href="#">View All</a></li>
-            <li class="mb-2"><a href="#">Visiting Cards</a></li>
-            <li class="mb-2"><a href="#">Stationery, Letterheads & Notebooks</a></li>
-            <li class="mb-2"><a href="#">Personalised Pens</a></li>
-            <li class="mb-2"><a href="#">Stamps and Ink</a></li>
-            <li class="mb-2"><a href="#">Signs, Posters & Marketing Materials</a></li>
-            <li class="mb-2"><a href="#">Labels, Stickers & Packaging</a></li>
-            <li class="mb-2"><a href="#">Clothing, Caps & Bags</a></li>
-            <li class="mb-2"><a href="#">Mugs, Albums & Gifts</a></li>
-            <li class="mb-2"><a href="#">Bulk Orders</a></li>
-            <li class="mb-2"><a href="#">Custom Drinkware</a></li>
-            <li class="mb-2"><a href="#">Custom Polo T-shirts</a></li>
-        </ul>
+      <button class="btn-close float-end" onclick="toggleSidebar()"></button>
+      <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo" style="height: 30px;"></a>
+
+      <h5 class="mt-4">Menu</h5>
+
+      <ul class="list-unstyled mt-3 msc-mobile-responsive-text">
+        <li class="mb-3"><a href=""><img src="./assets/svgicon/question.svg" style="height: 20px;"> Help</a>
+        </li>
+        <li class="mb-3"><a href=""><img src="./assets/svgicon/folder.svg" style="height: 20px;"> Folder</a>
+        </li>
+        <hr>
+        <li class="mb-2">Social</li>
+        <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;">
+            Instagram</a>
+        </li>
+        <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;">
+            Facebook</a></li>
+        <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg" style="height: 18px;">
+            Twitter</a>
+        </li>
+        <li><img src="./assets/svgicon/blackimg/printerest-black.svg" style="height: 18px;"> Pinterest</li>
+        <hr>
+        <li class="mb-2">Categories</li>
+        <li class="mb-2"><a href="#">View All</a></li>
+        <li class="mb-2"><a href="#">Visiting Cards</a></li>
+        <li class="mb-2"><a href="#">Stationery, Letterheads & Notebooks</a></li>
+        <li class="mb-2"><a href="#">Personalised Pens</a></li>
+        <li class="mb-2"><a href="#">Stamps and Ink</a></li>
+        <li class="mb-2"><a href="#">Signs, Posters & Marketing Materials</a></li>
+        <li class="mb-2"><a href="#">Labels, Stickers & Packaging</a></li>
+        <li class="mb-2"><a href="#">Clothing, Caps & Bags</a></li>
+        <li class="mb-2"><a href="#">Mugs, Albums & Gifts</a></li>
+        <li class="mb-2"><a href="#">Bulk Orders</a></li>
+        <li class="mb-2"><a href="#">Custom Drinkware</a></li>
+        <li class="mb-2"><a href="#">Custom Polo T-shirts</a></li>
+      </ul>
     </div>
 
 
@@ -333,281 +397,393 @@ overflow-y: auto;
 
     <!-- nav header -->
     <section id="msc-nav-header-section" class="d-none d-md-block">
-        <div class="container-fluid ">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="msc-nav-header-wrapper">
-                        <ul class="mas-nav-section">
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">View All</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Visiting Cards</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Stationery,Letterheads &
-                                    Notebooks</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Personalised Pens</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Stamps and Ink</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Signs,Posters & Marketing
-                                    Materials</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Labels,Stickers &
-                                    Packaging</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline"> Clothing,Caps & Bags</a>
-                            </li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Mugs,Albums & gifts</a>
-                            </li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Bulk Orders</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Drinkware</a></li>
-                            <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Polo T-shirts</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="msc-nav-header-wrapper">
+              <ul class="mas-nav-section">
+                <li class="msc-nav-list"><a href="#" class="hover-underline">View All</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Visiting Cards</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Stationery,Letterheads &
+                    Notebooks</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Personalised Pens</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Stamps and Ink</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Signs,Posters & Marketing
+                    Materials</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Labels,Stickers &
+                    Packaging</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline"> Clothing,Caps & Bags</a>
+                </li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Mugs,Albums & gifts</a>
+                </li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Bulk Orders</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Drinkware</a></li>
+                <li class="msc-nav-list"><a href="#" class="hover-underline">Custom Polo T-shirts</a>
+                </li>
+              </ul>
             </div>
+          </div>
+
         </div>
+      </div>
     </section>
     <!-- nav header end -->
-</header>
+  </header>
 
-<!-- Hero Section -->
-<section class="hero-section text-center">
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
     <div class="container">
-        <h1 class="display-5 fw-bold">All  Products</h1>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">All Products</li>
-          </ol>
-        </nav>
+      <h1 class="display-5 fw-bold">All Products</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item msc-home"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">All Products</li>
+        </ol>
+      </nav>
     </div>
-</section>
-<section id="msc-product-details-section">
-  <div class="msc-product-details-wrapper">
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <!-- Product Image -->
-        <div class="col-md-6 text-center position-relative">
-          <img src="./assets/images/category/-producttile-hoodies-001.png" alt="Hoodie" class="msc-product-img mb-3" />
-          <div class="d-flex justify-content-center">
-            <img src="./assets/images/category/-producttile-hoodies-001.png" class="msc-thumbnail" alt="Thumb 1" />
-            <img src="./assets/images/category/-producttile-Poster-001.png" class="msc-thumbnail" alt="Thumb 2" />
-            <img src="./assets/images/category/-producttile-hoodies-001.png" class="msc-thumbnail" alt="Thumb 3" />
-          </div>
-        </div>
-
-        <!-- Product Details -->
-        <div class="col-md-6">
-          <!-- Offer Badge -->
-          <div class="d-flex align-items-center mb-2">
-            <span class="msc-badge-sale">50% off</span>
-          </div>
-
-          <!-- Product Title -->
-          <h3 class="fw-bold mb-3">ShadowFlex Grey Hoodie</h3>
-
-          <!-- Rating -->
-          <p class="small mb-2">
-            <i class="fa-solid fa-star msc-star"></i>
-            <i class="fa-regular fa-star msc-star"></i>
-            <i class="fa-regular fa-star msc-star"></i>
-            <i class="fa-regular fa-star msc-star"></i>
-            <i class="fa-regular fa-star msc-star"></i>
-            / 9 Products Sold in last 2 Hours
-          </p>
-
-          <!-- Price -->
-          <h4 class="text-price mb-3">$60.00</h4>
-
-          <!-- Description -->
-          <p class="text-muted">
-            The Nike React Infinity Run series is designed to provide runners with enhanced cushioning, stability, and comfort...
-          </p>
-
-          <!-- Timer -->
-          <div class="mb-2">
-            <span class="me-2 fw-bold">Hurry Up Sale End in:</span>
-            <span class="msc-timer-box">24 : 06 : 40</span>
-          </div>
-
-          <!-- Color Options -->
-          <div class="mb-3">
-            <span class="fw-bold">Color:</span>
-            <span class="ms-2">Red</span>
-            <div class="d-flex mt-1">
-              <span class="msc-color-dot" style="background-color: #0d6efd;"></span>
-              <span class="msc-color-dot" style="background-color: #198754;"></span>
-              <span class="msc-color-dot" style="background-color: #6c757d;"></span>
+  </section>
+  <section id="msc-product-details-section">
+    <div class="msc-product-details-wrapper">
+      <div class="container py-5 msc-cat">
+        <div class="row align-items-center">
+          <!-- Product Image -->
+          <div class="col-md-6 text-center position-relative">
+            <img src="./assets/images/category/-producttile-hoodies-001.png" alt="Hoodie"
+              class="msc-product-img mb-3" />
+            <div class="d-flex justify-content-center">
+              <img src="./assets/images/category/-producttile-hoodies-001.png" class="msc-thumbnail" alt="Thumb 1" />
+              <img src="./assets/images/category/-producttile-Poster-001.png" class="msc-thumbnail" alt="Thumb 2" />
+              <img src="./assets/images/category/-producttile-hoodies-001.png" class="msc-thumbnail" alt="Thumb 3" />
             </div>
           </div>
 
-          <!-- Size Options -->
-          <div class="mb-3">
-            <span class="fw-bold">Size:</span>
-            <span class="ms-2">M</span>
-            <div class="mt-2">
-              <button class="msc-size-btn">XS</button>
-              <button class="msc-size-btn">S</button>
-              <button class="msc-size-btn">M</button>
-              <button class="msc-size-btn">L</button>
-              <button class="msc-size-btn">XL</button>
-              <button class="msc-size-btn">XXL</button>
+          <!-- Product Details -->
+          <div class="col-md-6">
+            <!-- Offer Badge -->
+            <div class="d-flex align-items-center mb-2">
+              <span class="msc-badge-sale">50% off</span>
             </div>
-          </div>
 
-          <!-- Quantity & Buttons -->
-          <div class="d-flex align-items-center mb-3">
-            <button class="btn btn-outline-secondary me-2">-</button>
-            <span class="px-2">1</span>
-            <button class="btn btn-outline-secondary me-3">+</button>
-            <button class="btn btn-outline-dark btn-icon me-2">
-              <a href="" style="text-decoration: none; color: white;">
-                <i class="fas fa-cart-plus"></i> Add to Cart
-              </a>
-              
-            </button>
-            <button class="btn msc-btn-buy-now btn-icon">
-              <a href="./Carts.html" style="text-decoration: none; color: white;">
-                <i class="fas fa-shopping-bag"></i> Buy Now
-              </a>
-              
-            </button>
-          </div>
+            <!-- Product Title -->
+            <h3 class="fw-bold mb-3">ShadowFlex Grey Hoodie</h3>
 
-          <!-- Wishlist & Share -->
-          <div class="d-flex mb-3 justify-content-between">
-            <a href="#" class="wishlist-link text-decoration-none">&#9829; Add to Wishlist</a>
-            <a href="#" class="sizeguider-link text-decoration-none">&#128712; SizeGuider</a>
-            <a href="#" class="share-link text-decoration-none">&#10150; Share</a>
-          </div>
+            <!-- Rating -->
+            <p class="small mb-2">
+              <i class="fa-solid fa-star msc-star"></i>
+              <i class="fa-regular fa-star msc-star"></i>
+              <i class="fa-regular fa-star msc-star"></i>
+              <i class="fa-regular fa-star msc-star"></i>
+              <i class="fa-regular fa-star msc-star"></i>
+              / 9 Products Sold in last 2 Hours
+            </p>
 
-          <!-- Delivery Info -->
-          <p class="mb-1"><strong>Delivery:</strong> Estimated Delivery time 4-5 days</p>
-          <p><strong>Returns:</strong> 20 Days After Purchase</p>
+            <!-- Price -->
+            <h4 class="text-price mb-3">$60.00</h4>
+
+            <!-- Description -->
+            <p class="text-muted">
+              The Nike React Infinity Run series is designed to provide runners with enhanced cushioning, stability, and
+              comfort...
+            </p>
+
+            <!-- Timer -->
+            <div class="mb-2">
+              <span class="me-2 fw-bold">Hurry Up Sale End in:</span>
+              <span class="msc-timer-box">24 : 06 : 40</span>
+            </div>
+
+            <!-- Color Options -->
+            <div class="mb-3 msc-color-code">
+              <span class="fw-bold">Color:</span>
+              <span class="ms-2">Red</span>
+              <div class="d-flex mt-1">
+                <span class="msc-color-dot" style="background-color: #0d6efd;"></span>
+                <span class="msc-color-dot" style="background-color: #198754;"></span>
+                <span class="msc-color-dot" style="background-color: #6c757d;"></span>
+              </div>
+            </div>
+
+            <!-- Size Options -->
+            <div class="mb-3 ">
+              <span class="fw-bold">Size:</span>
+              <span class="ms-2">M</span>
+              <div class="mt-2 msc-size-details">
+                <button class="msc-size-btn">XS</button>
+                <button class="msc-size-btn">S</button>
+                <button class="msc-size-btn">M</button>
+                <button class="msc-size-btn">L</button>
+                <button class="msc-size-btn">XL</button>
+                <button class="msc-size-btn">XXL</button>
+              </div>
+            </div>
+
+            <!-- Quantity & Buttons -->
+            <div class="d-flex align-items-center mb-3">
+              <button class="btn btn-outline-secondary me-2">-</button>
+              <span class="px-2">1</span>
+              <button class="btn btn-outline-secondary me-3">+</button>
+              <div class="msc-popular-pruduct-action">
+                <button class="msc-popular-pruduct-cart-button1">
+                  <i class="fas fa-shopping-bag"></i>
+                  <span>Buy Now</span>
+                </button>
+                <button class="msc-popular-pruduct-cart-button">
+                  <a href="./Carts.html" style="text-decoration: none; color: white;"> <i class="fas fa-cart-plus"></i>
+                    <span>Add to cart</span></a>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Wishlist & Share -->
+            <div class="d-flex mb-3 justify-content-between">
+              <a href="#" class="wishlist-link text-decoration-none">&#9829; Add to Wishlist</a>
+              <a href="#" class="sizeguider-link text-decoration-none">&#128712; SizeGuider</a>
+              <a href="#" class="share-link text-decoration-none">&#10150; Share</a>
+            </div>
+
+            <!-- Delivery Info -->
+            <p class="mb-1"><strong>Delivery:</strong> Estimated Delivery time 4-5 days</p>
+            <p><strong>Returns:</strong> 20 Days After Purchase</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- poudct into -->
-<div id="msc-product-details-section">
-  <div class="msc-product-details-wrapper">
-    <div class="container py-5">
+  <!-- poudct into -->
+  <div id="msc-product-details-section">
+    <div class="msc-product-details-wrapper">
+      <div class="container py-5">
 
-      <!-- Nav Tabs -->
-      <ul class="nav nav-tabs mb-4 justify-content-center msc-nav-tabs" id="productTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
-            data-bs-target="#description" type="button" role="tab" aria-controls="description"
-            aria-selected="true">DESCRIPTION</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="additional-tab" data-bs-toggle="tab" data-bs-target="#additional"
-            type="button" role="tab" aria-controls="additional" aria-selected="false">ADDITIONAL INFO</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-            type="button" role="tab" aria-controls="contact" aria-selected="false">CONTACT</button>
-        </li>
-      </ul>
+        <!-- Nav Tabs -->
+        <ul class="nav nav-tabs mb-4 justify-content-center msc-nav-tabs" id="productTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description"
+              type="button" role="tab" aria-controls="description" aria-selected="true">DESCRIPTION</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="additional-tab" data-bs-toggle="tab" data-bs-target="#additional" type="button"
+              role="tab" aria-controls="additional" aria-selected="false">ADDITIONAL INFO</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+              role="tab" aria-controls="contact" aria-selected="false">CONTACT</button>
+          </li>
+        </ul>
 
-      <!-- Tab Content -->
-      <div class="tab-content msc-tab-pane" id="productTabContent">
+        <!-- Tab Content -->
+        <div class="tab-content msc-tab-pane" id="productTabContent">
 
-        <!-- DESCRIPTION TAB -->
-        <div class="tab-pane fade show active" id="description" role="tabpanel"
-          aria-labelledby="description-tab">
-          <div class="row gy-4">
-            <!-- Image -->
-            <div class="col-md-4">
-              <img src="./assets/images/category/businesscards-001.png" alt="Product"
-                class="img-fluid rounded shadow" />
-            </div>
+          <!-- DESCRIPTION TAB -->
+          <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+            <div class="row gy-4">
+              <!-- Image -->
+              <div class="col-md-4">
+                <img src="./assets/images/category/businesscards-001.png" alt="Product"
+                  class="img-fluid rounded shadow msc-info" />
+              </div>
 
-            <!-- Description Text -->
-            <div class="col-md-8">
-              <div class="row">
-                <div class="col-lg-6 mb-4">
-                  <h5 class="msc-section-title">Product Specifications</h5>
-                  <p class="msc-product-des">Nike Style Scape shoes combine lightweight comfort and a breathable
-                    design with durable traction for any activity. Their sleek,
-                    modern look makes them perfect for both performance and casual wear.</p>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <h5 class="msc-section-title">Material</h5>
-                  <p class="msc-product-des">Breathable mesh upper ensures comfort, with a cushioned foam midsole
-                    for support. Durable rubber outsole provides lasting
-                    traction.</p>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <h5 class="msc-section-title">Washing Instructions</h5>
-                  <div class="msc-icon-text">
-                    <i class="fa-solid fa-shower"></i>
-                    <span class="msc-product-des">Iron maximum 100ºC.</span>
+              <!-- Description Text -->
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-lg-6 mb-4">
+                    <h5 class="msc-section-title">Product Specifications</h5>
+                    <p class="msc-product-des">Nike Style Scape shoes combine lightweight comfort and a breathable
+                      design with durable traction for any activity. Their sleek,
+                      modern look makes them perfect for both performance and casual wear.</p>
                   </div>
-                  <div class="msc-icon-text">
-                    <i class="fa-solid fa-ban"></i>
-                    <span class="msc-product-des">Do not bleach/bleach.</span>
+                  <div class="col-lg-6 mb-4">
+                    <h5 class="msc-section-title">Material</h5>
+                    <p class="msc-product-des">Breathable mesh upper ensures comfort, with a cushioned foam midsole
+                      for support. Durable rubber outsole provides lasting
+                      traction.</p>
                   </div>
-                  <div class="msc-icon-text">
-                    <i class="fa-solid fa-sync-alt"></i>
-                    <span class="msc-product-des">Do not dry clean.</span>
+                  <div class="col-lg-6 mb-4">
+                    <h5 class="msc-section-title">Washing Instructions</h5>
+                    <div class="msc-icon-text">
+                      <i class="fa-solid fa-shower"></i>
+                      <span class="msc-product-des">Iron maximum 100ºC.</span>
+                    </div>
+                    <div class="msc-icon-text">
+                      <i class="fa-solid fa-ban"></i>
+                      <span class="msc-product-des">Do not bleach/bleach.</span>
+                    </div>
+                    <div class="msc-icon-text">
+                      <i class="fa-solid fa-sync-alt"></i>
+                      <span class="msc-product-des">Do not dry clean.</span>
+                    </div>
+                    <div class="msc-icon-text">
+                      <i class="fa-solid fa-star"></i>
+                      <span class="msc-product-des">Test icon added.</span>
+                    </div>
                   </div>
-                  <div class="msc-icon-text">
-                    <i class="fa-solid fa-star"></i>
-                    <span class="msc-product-des">Test icon added.</span>
+                  <div class="col-lg-6 mb-4">
+                    <h5 class="msc-section-title">Product Specifications</h5>
+                    <p class="msc-product-des">Nike Style Scape shoes combine lightweight comfort and a breathable
+                      design with durable traction for any activity. Their sleek,
+                      modern look makes them perfect for both performance and casual wear.</p>
                   </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                  <h5 class="msc-section-title">Product Specifications</h5>
-                  <p class="msc-product-des">Nike Style Scape shoes combine lightweight comfort and a breathable
-                    design with durable traction for any activity. Their sleek,
-                    modern look makes them perfect for both performance and casual wear.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- ADDITIONAL INFO TAB -->
-        <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
-          <div class="table-responsive mt-4">
-            <table class="table table-bordered msc-table">
-              <tbody>
-                <tr>
-                  <th scope="row">Vendor</th>
-                  <td>StyleScape</td>
-                </tr>
-                <tr>
-                  <th scope="row">Type</th>
-                  <td>Running Shoes</td>
-                </tr>
-                <tr>
-                  <th scope="row">Size</th>
-                  <td>UK-9</td>
-                </tr>
-                <tr>
-                  <th scope="row">Color</th>
-                  <td>Red, Blue, Green, Royal Green</td>
-                </tr>
-                <tr>
-                  <th scope="row">Weight</th>
-                  <td>90 Grams</td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- ADDITIONAL INFO TAB -->
+          <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
+            <div class="table-responsive mt-4">
+              <table class="table table-bordered msc-table">
+                <tbody>
+                  <tr>
+                    <th scope="row">Vendor</th>
+                    <td>StyleScape</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Type</th>
+                    <td>Running Shoes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Size</th>
+                    <td>UK-9</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Color</th>
+                    <td>Red, Blue, Green, Royal Green</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Weight</th>
+                    <td>90 Grams</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
 
-        <!-- CONTACT TAB -->
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-          <p class="mt-4">Contact section coming soon...</p>
-        </div>
+          <!-- CONTACT TAB -->
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <p class="mt-4">Contact section coming soon...</p>
+          </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <footer id="msc-footer-section" class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center text-md-start">
+          <h5>
+            <img src="./assets/images/logo.png" alt="Vistaprint" width="250" class="img-fluid" />
+          </h5>
+          <p style="font-size: 12px; color: white;">You Need It. We Print It. You Love It.</p>
+          <p style="font-size: 12px; color: white;">Regulaprints is Here to Help Every Step Of The Way.</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+          <h5>Our Company</h5>
+          <p><a href="#">About Us</a></p>
+          <p><a href="#">Careers</a></p>
+          <p><a href="#">Ambassador Program</a></p>
+          <p><a href="#">For Investors</a></p>
+          <p><a href="#">For Media</a></p>
+          <p><a href="#">Sustainability</a></p>
+          <p><a href="#">Do Not Sell or Share My Info</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+          <h5>Let Us Help</h5>
+          <p><a href="#">My Account</a></p>
+          <p><a href="#">Shipping</a></p>
+          <p><a href="#">Contact & Support</a></p>
+          <p><a href="#">All Products</a></p>
+          <p><a href="#">Ideas & Advice</a></p>
+          <p><a href="#">Reseller Program</a></p>
+          <p><a href="#">Accessibility</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+          <h5>Contact Information</h5>
+          <div class="contact-info">
+            <div>
+              <img src="./assets/svgicon/phone.svg" alt="" /> <span>USA Phone: (513) 334-9393</span>
+            </div>
+            <div>
+              <img src="./assets/svgicon/whatsp.svg" alt="" /> <span>WhatsApp: (513) 334-9393</span>
+            </div>
+            <div>
+              <img src="./assets/svgicon/email.svg" alt="" /> <span>anthony@reeflci.com</span>
+            </div>
+            <div>
+              <img src="./assets/svgicon/location.svg" alt="" />
+              <span>Caribbean Sea, Placencia, Belize</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <section class="p-2 pt-0 text-center border-top pt-2 mt-4">
+        <div class="row d-flex align-items-center justify-content-between">
+          <div class="col-md-6 text-white text-md-start text-center mb-2 mb-md-0">
+            © 2025 Copyright:
+            <a class="text-white" href="#">regulaprints.com</a>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center gap-1 text-white">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <!-- Footer section end -->
+  <!-- add bootstrap js -->
+  <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('mobileSidebar');
+      sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+    }
+  </script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 6,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 6,
+        },
+      },
+    });
+  </script>
+
+  <script src="./assets/library/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
