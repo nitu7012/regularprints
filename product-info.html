@@ -166,6 +166,13 @@
       font-weight: 500;
       font-size: 16px;
     }
+    .breadcrumb {
+  --bs-breadcrumb-divider: '/';
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+}
 
   </style>
 </head>
@@ -362,7 +369,7 @@ overflow-y: auto;
 <!-- Hero Section -->
 <section class="hero-section text-center">
     <div class="container">
-        <h1 class="display-5 fw-bold">All Products</h1>
+        <h1 class="display-5 fw-bold">All  Products</h1>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb justify-content-center">
             <li class="breadcrumb-item"><a href="#">Home</a></li>

@@ -95,6 +95,20 @@
     font-size: 14px;
     font-weight: 400;
    }
+   @media (max-width: 768px) {
+  .msc-checkout-ul li {
+    font-size: 12px !important;
+  }
+  .msc-cart a{
+    font-size: 14px !important;
+  }
+  .msc-btn-shopping{
+    font-size: 10px !important;
+  }
+  .msc-order-heading{
+    font-size: 1rem !important;
+  }
+}
    .msc-checkout-ul li:hover{
     text-decoration: underline #D4AF37;
    }
@@ -119,6 +133,8 @@
    .msc-order-details-main{
     overflow: hidden;
    }
+
+
   </style>
 </head>
 
@@ -413,9 +429,9 @@ overflow-y: auto;
             </form>
             <div class="msc-term-condition">
               <ul class="msc-checkout-ul">
-                <li><a href="#">Return Policy</a></li>
-                <li><a href="#">Refund Policy</a></li>
-                <li><a href="#">Term & Conditions</a></li>
+                <li class="msc-condition"><a href="#">Return Policy</a></li>
+                <li class="msc-condition"><a href="#">Refund Policy</a></li>
+                <li class="msc-condition"><a href="#">Term & Conditions</a></li>
               </ul>
             </div>
           </div>

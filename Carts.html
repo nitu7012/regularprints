@@ -88,7 +88,14 @@
         .fa-arrow-down {
             color: black;
         }
-
+.msc-quantity{
+    text-align: center;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .msc-quantity{
+    text-align: center !important;
+}
+}
         /* cart */
 
         .msc-product-cart-heading {
@@ -325,7 +332,7 @@
                                       <tr class="d-none d-md-table-row">
                                         <th scope="col" class="h5 text-left">Product</th>
                                         <th scope="col" class="text-left">Price</th>
-                                        <th scope="col" class="text-left">Quantity</th>
+                                        <th scope="col" class="msc-quantity">Quantity</th>
                                         <th scope="col" class="text-left">Subtotal</th>
                                       </tr>
                                     </thead>
@@ -348,7 +355,7 @@
                               
                                         <!-- Quantity -->
                                         <td class="text-start text-md-center">
-                                          <p class="mb-2 fw-semibold d-md-none">Quantity</p>
+                                          <p class="mb-2 fw-semibold d-md-none msc-quantity">Quantity</p>
                                           <div class="d-flex flex-row justify-content-start justify-content-md-center align-items-center">
                                             <button class="btn btn-link px-2"
                                               onclick="this.parentNode.querySelector('input[type=number]').stepDown()">

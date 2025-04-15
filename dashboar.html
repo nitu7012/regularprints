@@ -47,7 +47,7 @@
         }
 
         .shop-btn {
-            background-color: #17cfcf;
+            background-color: #00A3E0;
             color: white;
             border-radius: 5px;
         }
@@ -61,6 +61,7 @@
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
             border-radius: 10px;
             background: #fff;
+            margin-top: 1.1rem;
         }
 
         .sidebar a {
@@ -140,7 +141,9 @@
         .info-card p {
             margin: 0.25rem 0;
         }
-
+#user-profile-section{
+    margin-bottom: 3rem;
+}
         /* account css end */
     </style>
 </head>
@@ -324,235 +327,241 @@
         <!-- nav header end -->
     </header>
     <!-- header end -->
-    <div class="banner"></div>
-    <div class="container">
-        <div class="profile-card">
-            <div class="d-flex align-items-center">
-                <img src="./assets/images/user.jpg" alt="Profile Image" class="profile-img">
-                <div>
-                    <h5 class="mb-1">Raquel Murillo</h5>
-                    <p class="text-muted mb-0"><i class="fas fa-map-marker-alt location-icon"></i> Phoenix, USA</p>
-                </div>
-            </div>
-            <button class="btn shop-btn"><i class="fas fa-shopping-cart"></i> Shopping Now</button>
-        </div>
 
-        <div class="row mt-4">
-            <!-- Sidebar -->
-            <div class="col-12 col-md-4">
-                <div class="sidebar">
-                    <a href="#" class="sidebar-link active" data-target="account"><i class="fas fa-user me-2"></i>
-                        Account Info</a>
-                    <a href="#" class="sidebar-link" data-target="wishlist"><i class="fas fa-heart me-2"></i> Wish
-                        List</a>
-                    <a href="#" class="sidebar-link" data-target="order"><i class="fas fa-box me-2"></i> Order</a>
-                    <a href="#" class="sidebar-link" data-target="settings"><i class="fas fa-cog me-2"></i> Settings</a>
-                    <a href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
-                </div>
-            </div>
-
-            <!-- Content -->
-            <div class="col-12 col-md-8">
-                <div class="content">
-                    <!-- account -->
-                    <div id="account" class="section active container-fluid mt-4">
-                        <!-- Personal Info Header -->
-                        <div
-                            class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
-                            <h4 class="mb-2 mb-md-0">Personal Info</h4>
-                            <button class="edit-btn btn btn-sm btn-outline-primary">Edit</button>
-                        </div>
-
-                        <!-- Personal Info Table -->
-                        <div class="table-responsive">
-                            <table class="table table-borderless">
-                                <tr>
-                                    <td><span class="msc-account-details">Customer Name</span></td>
-                                    <td>Raquel Murillo</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="msc-account-details">Mobile / Phone Number</span></td>
-                                    <td>+(253) 01234 5678</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="msc-account-details">Email Address</span></td>
-                                    <td>raque@toner.com</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="msc-account-details">Location</span></td>
-                                    <td>Phoenix, USA</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="msc-account-details">Since Member</span></td>
-                                    <td>Aug, 2022</td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <!-- Address Header -->
-                        <h4 class="mt-4">Billing & Shipping Address</h4>
-
-                        <!-- Address Cards -->
-                        <div class="row">
-                            <!-- Home Address -->
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="info-card border rounded p-3 h-100 shadow-sm">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <h6>HOME ADDRESS</h6>
-                                        <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
-                                    </div>
-                                    <p><strong>Raquel Murillo</strong></p>
-                                    <p>144 Cavendish Avenue, Indianapolis, IN 46251</p>
-                                    <p>Mo. +(253) 01234 5678</p>
-                                </div>
-                            </div>
-
-                            <!-- Shipping Address -->
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="info-card border rounded p-3 h-100 shadow-sm">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <h6>SHIPPING ADDRESS</h6>
-                                        <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
-                                    </div>
-                                    <p><strong>James Honda</strong></p>
-                                    <p>1246 Virgil Street Pensacola, FL 32501</p>
-                                    <p>Mo. +(253) 01234 5678</p>
-                                </div>
-                            </div>
+    <div id="user-profile-section">
+        <div class="user-profile-wrapper">
+            <div class="banner"></div>
+            <div class="container">
+                <div class="profile-card">
+                    <div class="d-flex align-items-center">
+                        <img src="./assets/images/user.jpg" alt="Profile Image" class="profile-img">
+                        <div>
+                            <h5 class="mb-1">Raquel Murillo</h5>
+                            <p class="text-muted mb-0"><i class="fas fa-map-marker-alt location-icon"></i> Phoenix, USA</p>
                         </div>
                     </div>
-
-                    <!-- withlist -->
-                    <!-- Wishlist Section -->
-                    <div id="wishlist" class="section container-fluid py-4">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-10 col-lg-8 text-center">
-                                <h4 class="mb-3">Wish List</h4>
-                                <p class="text-muted">Your saved items will appear here.</p>
-                            </div>
+                    <button class="btn shop-btn"><i class="fas fa-shopping-cart"></i> Shopping Now</button>
+                </div>
+        
+                <div class="row mt-4">
+                    <!-- Sidebar -->
+                    <div class="col-12 col-md-4">
+                        <div class="sidebar">
+                            <a href="#" class="sidebar-link active" data-target="account"><i class="fas fa-user me-2"></i>
+                                Account Info</a>
+                            <a href="#" class="sidebar-link" data-target="wishlist"><i class="fas fa-heart me-2"></i> Wish
+                                List</a>
+                            <a href="#" class="sidebar-link" data-target="order"><i class="fas fa-box me-2"></i> Order</a>
+                            <a href="#" class="sidebar-link" data-target="settings"><i class="fas fa-cog me-2"></i> Settings</a>
+                            <a href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
                         </div>
                     </div>
-
-
-                    <!-- order -->
-
-                    <!-- My Orders Section -->
-                    <div id="order" class="section container-fluid py-4">
-                        <div class="row justify-content-center">
-                            <div class="col-12">
-                                <h4 class="mb-3">My Orders</h4>
+        
+                    <!-- Content -->
+                    <div class="col-12 col-md-8">
+                        <div class="content">
+                            <!-- account -->
+                            <div id="account" class="section active container-fluid mt-4">
+                                <!-- Personal Info Header -->
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
+                                    <h4 class="mb-2 mb-md-0">Personal Info</h4>
+                                    <button class="edit-btn btn btn-sm btn-outline-primary">Edit</button>
+                                </div>
+        
+                                <!-- Personal Info Table -->
                                 <div class="table-responsive">
-                                    <table class="table align-middle">
-                                        <thead class="msc-product-cart-heading">
-                                            <tr>
-                                                <th scope="col" class="h6 text-nowrap">Order ID</th>
-                                                <th scope="col" class="h6 text-nowrap">Product</th>
-                                                <th scope="col" class="h6 text-nowrap">Date</th>
-                                                <th scope="col" class="h6 text-nowrap">Total Amount</th>
-                                                <th scope="col" class="h6 text-nowrap">Status</th>
-                                                <th scope="col" class="h6 text-nowrap">Invoice</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <p class="mb-0 fw-semibold"><a href="#">TBT1524530</a></p>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center flex-wrap">
-                                                        <img src="./assets/images/category/-producttile-hoodies-001.png"
-                                                            class="img-fluid rounded-3"
-                                                            style="width: 80px; max-width: 100%; height: auto;"
-                                                            alt="Hoodie">
-                                                        <div class="ms-3">
-                                                            <p class="mb-0">Hoodies</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 fw-semibold text-nowrap">4 Jul, 2025</p>
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 fw-semibold">$500</p>
-                                                </td>
-                                                <td>
-                                                    <span class="badge bg-warning text-dark">Pending</span>
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 fw-semibold"><a href="#">Invoice</a></p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td><span class="msc-account-details">Customer Name</span></td>
+                                            <td>Raquel Murillo</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="msc-account-details">Mobile / Phone Number</span></td>
+                                            <td>+(253) 01234 5678</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="msc-account-details">Email Address</span></td>
+                                            <td>raque@toner.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="msc-account-details">Location</span></td>
+                                            <td>Phoenix, USA</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="msc-account-details">Since Member</span></td>
+                                            <td>Aug, 2022</td>
+                                        </tr>
                                     </table>
                                 </div>
+        
+                                <!-- Address Header -->
+                                <h4 class="mt-4">Billing & Shipping Address</h4>
+        
+                                <!-- Address Cards -->
+                                <div class="row">
+                                    <!-- Home Address -->
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="info-card border rounded p-3 h-100 shadow-sm">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h6>HOME ADDRESS</h6>
+                                                <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
+                                            </div>
+                                            <p><strong>Raquel Murillo</strong></p>
+                                            <p>144 Cavendish Avenue, Indianapolis, IN 46251</p>
+                                            <p>Mo. +(253) 01234 5678</p>
+                                        </div>
+                                    </div>
+        
+                                    <!-- Shipping Address -->
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="info-card border rounded p-3 h-100 shadow-sm">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h6>SHIPPING ADDRESS</h6>
+                                                <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
+                                            </div>
+                                            <p><strong>James Honda</strong></p>
+                                            <p>1246 Virgil Street Pensacola, FL 32501</p>
+                                            <p>Mo. +(253) 01234 5678</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+        
+                            <!-- withlist -->
+                            <!-- Wishlist Section -->
+                            <div id="wishlist" class="section container-fluid py-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-md-10 col-lg-8 text-center">
+                                        <h4 class="mb-3">Wish List</h4>
+                                        <p class="text-muted">Your saved items will appear here.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <!-- order -->
+        
+                            <!-- My Orders Section -->
+                            <div id="order" class="section container-fluid py-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <h4 class="mb-3">My Orders</h4>
+                                        <div class="table-responsive">
+                                            <table class="table align-middle">
+                                                <thead class="msc-product-cart-heading">
+                                                    <tr>
+                                                        <th scope="col" class="h6 text-nowrap">Order ID</th>
+                                                        <th scope="col" class="h6 text-nowrap">Product</th>
+                                                        <th scope="col" class="h6 text-nowrap">Date</th>
+                                                        <th scope="col" class="h6 text-nowrap">Total Amount</th>
+                                                        <th scope="col" class="h6 text-nowrap">Status</th>
+                                                        <th scope="col" class="h6 text-nowrap">Invoice</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="mb-0 fw-semibold"><a href="#">TBT1524530</a></p>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center flex-wrap">
+                                                                <img src="./assets/images/category/-producttile-hoodies-001.png"
+                                                                    class="img-fluid rounded-3"
+                                                                    style="width: 80px; max-width: 100%; height: auto;"
+                                                                    alt="Hoodie">
+                                                                <div class="ms-3">
+                                                                    <p class="mb-0">Hoodies</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0 fw-semibold text-nowrap">4 Jul, 2025</p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0 fw-semibold">$500</p>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-warning text-dark">Pending</span>
+                                                        </td>
+                                                        <td>
+                                                            <p class="mb-0 fw-semibold"><a href="#">Invoice</a></p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+        
+                            <!-- setting -->
+                            <!-- Settings Section -->
+                            <div id="settings" class="section container-fluid py-4 ">
+                                <h4 class="mb-4">Personal Details</h4>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 mb-4">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control custom-input-section" value="Topper girl">
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 mb-4">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter your lastname">
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 mb-4">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" value="+(253) 01234 5678">
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 mb-4">
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" value="topper@gmail.com">
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mb-4">
+                                        <label class="form-label">City</label>
+                                        <input type="text" class="form-control" value="Bihar">
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mb-4">
+                                        <label class="form-label">Country</label>
+                                        <input type="text" class="form-control" value="USA">
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mb-4">
+                                        <label class="form-label">Zip Code</label>
+                                        <input type="text" class="form-control" value="90011">
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label class="form-label">Description</label>
+                                        <textarea class="form-control" rows="3">Hi I'm Raquel Murillo...</textarea>
+                                    </div>
+                                </div>
+        
+                                <h4 class="mt-2 mb-4">Change Password</h4>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 mb-4">
+                                        <label class="form-label">Old Password*</label>
+                                        <input type="password" class="form-control" placeholder="Enter current password">
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mb-4">
+                                        <label class="form-label">New Password*</label>
+                                        <input type="password" class="form-control" placeholder="Enter new password">
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 mb-4">
+                                        <label class="form-label">Confirm Password*</label>
+                                        <input type="password" class="form-control" placeholder="Confirm password">
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="#" class="text-decoration-none">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
-
-
-                    <!-- setting -->
-                    <!-- Settings Section -->
-                    <div id="settings" class="section container-fluid py-4">
-                        <h4 class="mb-4">Personal Details</h4>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 mb-4">
-                                <label class="form-label">First Name</label>
-                                <input type="text" class="form-control custom-input-section" value="Topper girl">
-                            </div>
-                            <div class="col-sm-12 col-md-6 mb-4">
-                                <label class="form-label">Last Name</label>
-                                <input type="text" class="form-control" placeholder="Enter your lastname">
-                            </div>
-                            <div class="col-sm-12 col-md-6 mb-4">
-                                <label class="form-label">Phone Number</label>
-                                <input type="text" class="form-control" value="+(253) 01234 5678">
-                            </div>
-                            <div class="col-sm-12 col-md-6 mb-4">
-                                <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" value="topper@gmail.com">
-                            </div>
-                            <div class="col-sm-12 col-md-4 mb-4">
-                                <label class="form-label">City</label>
-                                <input type="text" class="form-control" value="Bihar">
-                            </div>
-                            <div class="col-sm-12 col-md-4 mb-4">
-                                <label class="form-label">Country</label>
-                                <input type="text" class="form-control" value="USA">
-                            </div>
-                            <div class="col-sm-12 col-md-4 mb-4">
-                                <label class="form-label">Zip Code</label>
-                                <input type="text" class="form-control" value="90011">
-                            </div>
-                            <div class="col-12 mb-4">
-                                <label class="form-label">Description</label>
-                                <textarea class="form-control" rows="3">Hi I'm Raquel Murillo...</textarea>
-                            </div>
-                        </div>
-
-                        <h4 class="mt-2 mb-4">Change Password</h4>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-4 mb-4">
-                                <label class="form-label">Old Password*</label>
-                                <input type="password" class="form-control" placeholder="Enter current password">
-                            </div>
-                            <div class="col-sm-12 col-md-4 mb-4">
-                                <label class="form-label">New Password*</label>
-                                <input type="password" class="form-control" placeholder="Enter new password">
-                            </div>
-                            <div class="col-sm-12 col-md-4 mb-4">
-                                <label class="form-label">Confirm Password*</label>
-                                <input type="password" class="form-control" placeholder="Confirm password">
-                            </div>
-                            <div class="col-12">
-                                <a href="#" class="text-decoration-none">Forgot Password?</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
+   
 
 
        
