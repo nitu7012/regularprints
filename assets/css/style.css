@@ -283,6 +283,8 @@
 #msc-explore-all-category-section {
     width: 100%;
     margin-top: 4rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .msc-categoy-img {
     width: 100%;
@@ -342,7 +344,9 @@
     .msc-category-paragraph {
       font-size: 10px !important;
     }
-  
+    #msc-explore-all-category-section {
+       overflow:hidden  !important;
+    }
     .owl-nav button.owl-prev,
     .owl-nav button.owl-next {
       width: 24px !important;
@@ -353,10 +357,41 @@
     .msc-category-img-wrapper {
       width: 90%;
     }
+    #msc-create-business-section {
+        margin-top: 2rem !important;
+    }
   }
-  
+  /* all section */
 
-
+  @media (max-width: 700px) {
+    #msc-create-business-section {
+        margin-top: 2rem !important;
+    }
+    #msc-faq-main-section{
+        margin-top: 2rem !important;
+        padding: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+    .msc-faq-question-section-wrapper{
+        margin-top: 1.5rem !important;
+        padding: 0 !important;
+    }
+    #msc-why-choose-us-section{
+        margin-top: 2rem !important;
+    }
+    #msc-top-sale-product-section{
+        margin-top: 2rem !important;
+    }
+    #msc-special-moment-section{
+        margin-top: 2rem !important;
+    }
+    #msc-category-offer-section{
+        margin-top: 2rem !important;
+    }
+    #msc-explore-all-category-section{
+        margin-top: 2rem !important;
+    }
+  }
 /* explore all category end */
 /* Popular product card */
 
@@ -860,12 +895,12 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
+      overflow-y: hidden;
+    overflow-x: hidden;
     }
-/* ✅ Owl Carousel Structure Fix - Do NOT use display:flex here */
-.owl-carousel {
-    /* gap yahan nahi dena chahiye */
-  }
-  
+.owl-carousel{
+    overflow: hidden;
+}
   /* ✅ Gap between items - Proper Way */
   .owl-carousel .item {
     padding: 0 7.5px;
@@ -958,6 +993,9 @@
       width: 100% !important;
       padding: 10px !important;
     }
+    .testimonial-header {
+       overflow: hidden !important;
+      }
   
     .msc-testmonial-stars,
     .msc-testmonial-date-time {
@@ -1047,7 +1085,7 @@
 
 @media (max-width: 768px) {
     .msc-faq-item {
-        width: 75% !important;
+        width: 95% !important;
         margin-top: 1rem;
         margin: 0 auto;
         display: block;
@@ -1120,7 +1158,7 @@
 /* faq */
 @media (max-width: 768px) {
     .accordion-item {
-        width: 80% !important;
+        width: 100% !important;
         margin-top: 1rem;
         margin: 0 auto;
         display: block;

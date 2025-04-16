@@ -139,21 +139,7 @@
       <button class="btn-close float-end" onclick="toggleSidebar()"></button>
       <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo" style="height: 30px;"></a>
 
-      <h5 class="mt-4 msc-mobile-responsive-text-heading">Menu</h5>
       <ul class="list-unstyled mt-3 msc-mobile-responsive-text">
-        <li class="mb-2"><a href=""><img src="./assets/svgicon/question.svg" style="height: 20px;"> Help</a></li>
-        <li class="mb-2"><a href=""><img src="./assets/svgicon/folder.svg" style="height: 20px;"> Folder</a></li>
-        <hr>
-        <li class="mb-2">Social</li>
-        <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;">
-            Instagram</a>
-        </li>
-        <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;">
-            Facebook</a></li>
-        <li class="mb-2"><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg" style="height: 18px;">
-            Twitter</a>
-        </li>
-        <hr>
         <li class="mb-2 msc-mobile-responsive-text-heading">Categories</li>
         <li class="mb-2"><a href="#">View All</a></li>
         <li class="mb-2"><a href="#">Visiting Cards</a></li>
@@ -167,6 +153,35 @@
         <li class="mb-2"><a href="#">Bulk Orders</a></li>
         <li class="mb-2"><a href="#">Custom Drinkware</a></li>
         <li class="mb-2"><a href="#">Custom Polo T-shirts</a></li>
+        <hr>
+        <!-- Menu -->
+        <li class="mb-2">Social</li>
+        <div class="d-flex align-items-center gap-3">
+          <li class=""><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;">
+          </a>
+      </li>
+      <li class=""><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;">
+          </a></li>
+      <li class=""><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg" style="height: 18px;">
+          </a>
+      </li>
+        </div>
+       
+        <hr>
+        <li class="mb-2 msc-mobile-responsive-text-heading">Address</li>
+        
+        <li class="mb-2">
+          <a href="#">
+            <i class="fa-solid fa-location-dot me-2"></i>
+            123 Yonge Street, Toronto, ON M5C 1W4
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#">
+            <i class="fa-solid fa-location-dot me-2"></i>
+            Suite 400, 555 Burrard St, Vancouver, BC V7X 1M8
+          </a>
+        </li>       
       </ul>
     </div>
 
@@ -1168,37 +1183,35 @@
   <!-- Init Owl Carousel -->
 
   <script>
-    $(document).ready(function () {
-      // ✅ Explore Carousel
-      var exploreCarousel = $(".explore-carousel").owlCarousel({
-        smartSpeed: 750,
-        nav: true,
-        dots: true,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: false,
-        navText: [
-          '<i class="fa-solid fa-chevron-left"></i>',
-          '<i class="fa-solid fa-chevron-right"></i>'
-        ],
-        responsive: {
-          0: {
-            items: 3,
-            dots: false
-          },
-          600: {
-            items: 3
-          },
-          1000: {
-            items: 6
-          }
-        }
-      });
-  
-      // ✅ Move Explore navs into custom container
-      $(".carousel-nav.explore-nav").append($(".explore-carousel .owl-nav"));
+   $(window).on('load', function () {
+  $(".explore-carousel").owlCarousel({
+    smartSpeed: 750,
+    nav: true,
+    dots: true,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: false,
+    navText: [
+      '<i class="fa-solid fa-chevron-left"></i>',
+      '<i class="fa-solid fa-chevron-right"></i>'
+    ],
+    responsive: {
+      0: {
+        items: 3,
+        dots: false
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 6
+      }
+    }
+  });
+
+  $(".carousel-nav.explore-nav").append($(".explore-carousel .owl-nav"));
   
       // ✅ Testimonial Carousel
       var testimonialCarousel = $(".tesmonila_carousel").owlCarousel({
