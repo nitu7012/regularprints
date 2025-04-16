@@ -1016,7 +1016,7 @@
     }
   
     .msc-testmonial-description {
-      font-size: 12px;
+      font-size: 14px !important;
       text-align: left;
     }
   
@@ -1110,7 +1110,7 @@
     }
 
     .msc-faq-item p {
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
 
     .msc-faq-item h6 {
@@ -1122,6 +1122,9 @@
         font-size: 14px !important;
         margin-top: 0.2rem !important;
         padding: 0 1rem;
+    }
+    .msc-top-sale-product-card-category-name span{
+        font-size: 14px !important;
     }
 }
 
