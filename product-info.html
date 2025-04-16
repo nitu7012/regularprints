@@ -38,17 +38,24 @@
       margin-top: 4rem;
     }
 
-    .msc-product-img {
-      width: 100%;
-      max-width: 400px;
-    }
-
     .msc-thumbnail {
       width: 60px;
-      height: 60px;
-      margin: 5px;
-      border: 1px solid #ddd;
+      height: auto;
       cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: border 0.3s;
+    }
+
+    .msc-thumbnail:hover {
+      border: 2px solid #facc15;
+      /* Yellow on hover */
+    }
+
+    .msc-product-img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
     }
 
     .msc-color-dot {
@@ -174,23 +181,28 @@
     }
 
     @media (max-width: 768px) {
-      .msc-cat{
+      .msc-cat {
         padding: 20px 10px !important;
       }
-      .msc-product-img{
+
+      .msc-product-img {
         height: 250px !important;
-      } 
-      .msc-info{
+      }
+
+      .msc-info {
         height: 220px !important;
         width: 100% !important;
       }
-     
+
       .hero-section {
         padding: 30px 0 !important;
       }
-      .msc-table td, .msc-table th{
+
+      .msc-table td,
+      .msc-table th {
         font-size: 12px !important;
       }
+
       .small,
       small {
         font-size: .8rem !important;
@@ -214,28 +226,33 @@
       p {
         font-size: 12px;
       }
-     
-      #msc-product-details-section{
-        padding: 0 10px !important;
+
+      #msc-product-details-section {
+        padding: 0  !important;
         margin: 0 !important;
       }
-      .msc-section-title{
+
+      .msc-section-title {
         font-size: 14px !important;
       }
-      .msc-product-des{
+
+      .msc-product-des {
         font-size: 12px !important;
       }
+
       .msc-icon-text .fa-solid {
-          font-size: 12px !important;
+        font-size: 12px !important;
       }
-      .msc-color-code{
+
+      .msc-color-code {
         display: flex;
       }
-      .msc-color-dot{
+
+      .msc-color-dot {
         height: 16px !important;
         width: 16px !important;
       }
-     
+
     }
   </style>
 </head>
@@ -308,30 +325,29 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="msc-header-links-wrapper">
-                <ul class="nav-links d-flex align-items-center">
-                  <li><a href="#"><img src="./assets/svgicon/question.svg" alt="" class="msc-svg-icon"></a></li>
-                  <li><a href="#"><img src="./assets/svgicon/folder.svg" alt="" class="msc-svg-icon"></a></li>
-                  <li><a href="#"><img src="./assets/svgicon/heart.svg" alt="" class="msc-svg-icon"></a></li>
-                  <li><a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="" class="msc-svg-icon"></a></li>
-                  <li><a href="#"><img src="./assets/svgicon/bag.svg" alt="" class="msc-svg-icon"></a>
-                  </li>
-                </ul>
-              </div>
+            <div class="col-md-3 d-flex justify-content-center gap-2 text-white ml-2">
+              <a class="msc-icon-btn " href="#!" role="button">
+                <i class="fa-regular fa-circle-question"></i> <!-- Help -->
+              </a>
+              <a class="msc-icon-btn " href="#!" role="button">
+                <i class="fa-regular fa-folder-open"></i> <!-- Folder -->
+              </a>
+              <a class="msc-icon-btn " href="#!" role="button">
+                <i class="fa-regular fa-user"></i> <!-- User -->
+              </a>
+              <a class="msc-icon-btn " href="#!" role="button">
+                <i class="fa-solid fa-heart"></i> <!-- Heart -->
+              </a>
+              <a class="msc-icon-btn " href="#!" role="button">
+                <i class="fa-solid fa-bag-shopping"></i> <!-- Bag -->
+              </a>
             </div>
+
             <div class="col-md-2">
-              <div class="msc-header-links-wrapper">
-                <ul class="nav-links d-flex align-items-center">
-                  <li><a href="#"><img src="./assets/svgicon/blackimg/insta-black.svg" alt="" class="msc-svg-icon"></a>
-                  </li>
-                  <li><a href="#"><img src="./assets/svgicon/blackimg/facebook.svg" alt="" class="msc-svg-icon"></a>
-                  </li>
-                  <li><a href="#"><img src="./assets/svgicon/blackimg/twitter-black.svg" alt=""
-                        class="msc-svg-icon"></a></li>
-                  <li><a href="#"><img src="./assets/svgicon/blackimg/printerest-black.svg" alt=""
-                        class="msc-svg-icon"></a></li>
-                </ul>
+              <div class="col-md-6 d-flex justify-content-center gap-2 text-white">
+                <a class="msc-icon-btn " href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="msc-icon-btn " href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <a class="msc-icon-btn " href="#!" role="button"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -375,18 +391,18 @@
         <li class="mb-2">Social</li>
         <div class="d-flex align-items-center gap-3">
           <li class=""><a href=""><img src="./assets/svgicon/blackimg/insta-black.svg" style="height: 18px;">
-          </a>
-      </li>
-      <li class=""><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;">
-          </a></li>
-      <li class=""><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg" style="height: 18px;">
-          </a>
-      </li>
+            </a>
+          </li>
+          <li class=""><a href=""><img src="./assets/svgicon/blackimg/facebook.svg" style="height: 18px;">
+            </a></li>
+          <li class=""><a href=""><img src="./assets/svgicon/blackimg/twitter-black.svg" style="height: 18px;">
+            </a>
+          </li>
         </div>
-       
+
         <hr>
         <li class="mb-2 msc-mobile-responsive-text-heading">Address</li>
-        
+
         <li class="mb-2">
           <a href="#">
             <i class="fa-solid fa-location-dot me-2"></i>
@@ -398,7 +414,7 @@
             <i class="fa-solid fa-location-dot me-2"></i>
             Suite 400, 555 Burrard St, Vancouver, BC V7X 1M8
           </a>
-        </li>       
+        </li>
       </ul>
     </div>
 
@@ -452,15 +468,23 @@
       <div class="container py-5 msc-cat">
         <div class="row align-items-center">
           <!-- Product Image -->
-          <div class="col-md-6 text-center position-relative">
-            <img src="./assets/images/category/-producttile-hoodies-001.png" alt="Hoodie"
-              class="msc-product-img mb-3" />
-            <div class="d-flex justify-content-center">
-              <img src="./assets/images/category/-producttile-hoodies-001.png" class="msc-thumbnail" alt="Thumb 1" />
-              <img src="./assets/images/category/-producttile-Poster-001.png" class="msc-thumbnail" alt="Thumb 2" />
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <!-- Thumbnails Left Side -->
+            <div class="d-flex flex-column justify-content-center align-items-center me-3">
+              <img src="./assets/images/category/-producttile-hoodies-001.png" class="msc-thumbnail mb-2"
+                alt="Thumb 1" />
+              <img src="./assets/images/category/-producttile-Poster-001.png" class="msc-thumbnail mb-2"
+                alt="Thumb 2" />
               <img src="./assets/images/category/-producttile-hoodies-001.png" class="msc-thumbnail" alt="Thumb 3" />
             </div>
+
+            <!-- Main Image Center -->
+            <div class="position-relative text-center">
+              <img src="./assets/images/category/-producttile-hoodies-001.png" alt="Hoodie"
+                class="msc-product-img mb-3" />
+            </div>
           </div>
+
 
           <!-- Product Details -->
           <div class="col-md-6">

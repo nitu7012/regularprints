@@ -181,7 +181,24 @@
 .hover-underline:hover::after {
     width: 100%;
 }
+.msc-icon-btn {
+    background-color: transparent;
+    border: none !important;
+    font-size: 18px;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 3px 0px, 
+            rgba(255, 255, 255, 0.15) 0px 0px 0px 1px;
 
+ }
+  
+  .msc-icon-btn:hover {
+    color: var(--msc-secondary-color);
+  }
+  
+  
 /* nav bar end */
 /* Top header offer section */
 #msc-top-header-offer-section {
@@ -241,7 +258,7 @@
 .msc-mobile-responsive-text a {
     text-decoration: none;
     color: black;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .msc-mobile-responsive-text img {
@@ -342,7 +359,7 @@
   /* Responsive */
   @media (max-width: 700px) {
     .msc-category-paragraph {
-      font-size: 10px !important;
+      font-size: 12px !important;
     }
     #msc-explore-all-category-section {
        overflow:hidden  !important;
@@ -590,13 +607,6 @@
     margin-top: 1.5rem;
 }
 
-.fa-heart {
-    padding: 6px;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 14px;
-    color: red;
-}
 
 /* special moment */
 
@@ -660,7 +670,7 @@
     }
 
     .msc-create-business-main-card-wrapper .name {
-        font-size: 10px !important;
+        font-size: 12px !important;
     }
 }
 
@@ -875,13 +885,7 @@
     margin-top: 1.5rem;
 }
 
-.fa-heart {
-    padding: 6px;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 14px;
-    color: red;
-}
+
 
 /* Top sale Product card end */
 
@@ -1051,7 +1055,7 @@
 }
 @media (max-width: 768px) {
     .msc-heading-main-text{
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
     .carousel-nav{
         margin-bottom: 4px;
@@ -1102,11 +1106,12 @@
     }
 
     .msc-faq-item h6 {
-        font-size: 14px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
     }
 
     .msc-faq-section-head p {
-        font-size: 12px !important;
+        font-size: 14px !important;
         margin-top: 0.2rem !important;
         padding: 0 1rem;
     }
