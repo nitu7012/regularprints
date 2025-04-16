@@ -1341,7 +1341,11 @@
     .msc-footer-heading p {
         text-align: left !important;
     }
-
+  .msc-footer-top-des{
+    text-align: left !important;
+    padding-left: 8px !important;
+   font-size: 12px !important;
+  }
     .msc-copyright span {
         text-align: left !important;
         font-size: 14px !important;
@@ -1349,12 +1353,7 @@
 
     .msc-copyright a {
         text-align: left !important;
-        font-size: 14px !important;
-    }
-
-    .msc-footer-heading,
-    .text-md-start {
-        text-align: center !important;
+        font-size: 12px !important;
     }
 
     .msc-footer-social-icons {
@@ -1364,6 +1363,18 @@
 
     .msc-footer-social-icons a {
         margin: 5px;
+    }
+    .contact-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .msc-contact-des{
+        display: flex;
+        gap: 10px;
+    }
+    .msc-contact-des img{
+        width: 20px !important;
     }
 
 }
