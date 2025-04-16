@@ -2,178 +2,189 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Profile Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Profile Dashboard</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
 
-        .banner {
-            background: url('./assets/images/userBanner.jpg') no-repeat center center;
-            background-size: cover;
-            height: 250px;
-            filter: brightness(80%);
-        }
+    .banner {
+      background: url('./assets/images/userBanner.jpg') no-repeat center center;
+      background-size: cover;
+      height: 250px;
+      filter: brightness(80%);
+    }
 
-        .profile-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: -50px;
-            position: relative;
-        }
+    .profile-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: -50px;
+      position: relative;
+    }
 
-        .profile-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin-right: 15px;
-        }
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
 
-        .location-icon {
-            color: gray;
-        }
+    .location-icon {
+      color: gray;
+    }
 
-        .shop-btn {
-            background-color: #00A3E0;
-            color: white;
-            border-radius: 5px;
-        }
+    .shop-btn {
+      background-color: #00A3E0;
+      color: white;
+      border-radius: 5px;
+    }
 
-        .shop-btn:hover {
-            background-color: #14b0b0;
-        }
+    .shop-btn:hover {
+      background-color: #14b0b0;
+    }
 
-        .sidebar {
-            padding: 20px;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
-            border-radius: 10px;
-            background: #fff;
-            margin-top: 1.1rem;
-        }
+    .sidebar {
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+      border-radius: 10px;
+      background: #fff;
+      margin-top: 1.1rem;
+    }
 
-        .sidebar a {
-            display: block;
-            margin-bottom: 10px;
-            padding: 10px;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
+    .sidebar a {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
 
-        .sidebar a.active,
-        .sidebar a:hover {
-            background-color: #00A3E0;
-            color: white;
-        }
+    .sidebar a.active,
+    .sidebar a:hover {
+      background-color: #00A3E0;
+      color: white;
+    }
 
-        .content {
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
-            background: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            margin-top: 20px;
-        }
+    .content {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 20px;
+    }
 
-        .section {
-            display: none;
-        }
+    .section {
+      display: none;
+    }
 
-        .section.active {
-            display: block;
-        }
+    .section.active {
+      display: block;
+    }
 
-        .custom-input-section:focus {
-            outline: none;
-            box-shadow: 0 0 0 1px #D4AF37;
-            border-color: #D4AF37;
-        }
+    .custom-input-section:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #D4AF37;
+      border-color: #D4AF37;
+    }
 
-        .edit-btn {
-            background: #e9ecef;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
+    .edit-btn {
+      background: #e9ecef;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
 
-        .info-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            background: #fff;
-        }
+    .info-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fff;
+    }
 
-        .msc-account-details {
-            font-size: 16px;
-            font-weight: 500;
-        }
+    .msc-account-details {
+      font-size: 16px;
+      font-weight: 500;
+    }
 
-        @media (max-width: 576px) {
-            .banner{
-                height: 100px !important;
-            }
-            .profile-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            body {
-                font-size: 14px;
-            }
-            .profile-card{
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
-            .sidebar{
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-            }
-            .shop-btn{
-                font-size: 14px !important;
-                margin-top: 1rem !important;
-            }
-            .content{
-                margin-left: 10px !important;
-                margin-right: 10px !important;
-                padding: 10px !important;
-            }
-            .msc-account-details{
-                font-size: 12px !important;
-            }
-            td{
-                font-size: 12px !important;
-            }
-            h4{
-                font-size: 14px !important;
-            }
-        }
+    @media (max-width: 576px) {
+      .banner {
+        height: 100px !important;
+      }
 
-        /* account css */
-        .msc-account-details {
-            font-weight: 600;
-            color: #555;
-        }
+      .profile-card {
+        flex-direction: column;
+        text-align: center;
+      }
 
-        .info-card p {
-            margin: 0.25rem 0;
-        }
-#user-profile-section{
-    margin-bottom: 3rem;
-}
-        /* account css end */
-    </style>
+      body {
+        font-size: 14px;
+      }
+
+      .profile-card {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+      }
+
+      .sidebar {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+      }
+
+      .shop-btn {
+        font-size: 14px !important;
+        margin-top: 1rem !important;
+      }
+
+      .content {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        padding: 10px !important;
+      }
+
+      .msc-account-details {
+        font-size: 12px !important;
+      }
+
+      td {
+        font-size: 12px !important;
+      }
+
+      h4 {
+        font-size: 14px !important;
+      }
+    }
+
+    /* account css */
+    .msc-account-details {
+      font-weight: 600;
+      color: #555;
+    }
+
+    .info-card p {
+      margin: 0.25rem 0;
+    }
+
+    #user-profile-section {
+      margin-bottom: 3rem;
+    }
+
+    /* account css end */
+  </style>
 </head>
 
 <body>
@@ -203,24 +214,33 @@
     <!-- Mobile & Tablet Header -->
     <section class="d-flex d-md-none p-2 justify-content-between align-items-center">
       <!-- Left: Justify + Logo -->
+
+      </div>
       <div class="d-flex align-items-center gap-2">
-        <button class="btn p-0" onclick="toggleSidebar()">
+        <button class="btn p-0" onclick="toggleSidebar()" style="color: black; font-size: 16px;">
           <i class="fas fa-bars fs-4"></i>
         </button>
         <a href="./index.html"><img src="./assets/images/logo.png" alt="Logo" style="height: 30px;"></a>
       </div>
 
       <!-- Center: Search Icon -->
-      <div>
-        <button class="btn p-0">
-          <img src="./assets/svgicon/searc.svg" alt="Search" style="height: 20px;">
-        </button>
+      <div class="msc-search-bar-wrapper">
+        <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="search-btn">
+            <img src="./assets/svgicon/searc.svg" alt="Search">
+          </button>
+        </div>
       </div>
 
       <!-- Right: Icons -->
-      <div class="d-flex align-items-center gap-3">
-        <a href=""> <img src="./assets/svgicon/bag.svg" alt="Bag" style="height: 20px;"></a>
-        <a href="./Signup.html"><img src="./assets/svgicon/user.svg" alt="User" style="height: 20px;"></a>
+      <div class="d-flex align-items-center gap-2">
+        <a class="" href="#!" role="button" style="color: black; font-size: 16px;">
+          <i class="fa-solid fa-bag-shopping"></i> <!-- Bag -->
+        </a>
+        <a class="" href="#!" role="button" style="color: black; font-size: 16px;">
+          <i class="fa-regular fa-user"></i> <!-- User -->
+        </a>
       </div>
     </section>
 
@@ -245,30 +265,28 @@
               </div>
             </div>
             <div class="col-md-3 d-flex justify-content-center gap-2 text-white ml-2">
-              <a class="msc-icon-btn " href="#!" role="button">
+              <a class="" href="#!" role="button">
                 <i class="fa-regular fa-circle-question"></i> <!-- Help -->
               </a>
-              <a class="msc-icon-btn " href="#!" role="button">
+              <a class="" href="#!" role="button">
                 <i class="fa-regular fa-folder-open"></i> <!-- Folder -->
               </a>
-              <a class="msc-icon-btn " href="#!" role="button">
+              <a class="" href="#!" role="button">
                 <i class="fa-regular fa-user"></i> <!-- User -->
               </a>
-              <a class="msc-icon-btn " href="#!" role="button">
+              <a class="" href="#!" role="button">
                 <i class="fa-solid fa-heart"></i> <!-- Heart -->
               </a>
-              <a class="msc-icon-btn " href="#!" role="button">
+              <a class="" href="#!" role="button">
                 <i class="fa-solid fa-bag-shopping"></i> <!-- Bag -->
               </a>
             </div>
-            
+
             <div class="col-md-2">
               <div class="col-md-6 d-flex justify-content-center gap-2 text-white">
-                <a class="msc-icon-btn " href="#!" role="button"><i
-                    class="fab fa-facebook-f"></i></a>
-                <a class="msc-icon-btn " href="#!" role="button"><i class="fab fa-twitter"></i></a>
-                <a class="msc-icon-btn " href="#!" role="button"><i
-                    class="fab fa-instagram"></i></a>
+                <a class="" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a class="" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                <a class="" href="#!" role="button"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -371,330 +389,333 @@
     </section>
     <!-- nav header end -->
   </header>
-    <!-- header end -->
+  <!-- header end -->
 
-    <div id="user-profile-section">
-        <div class="user-profile-wrapper">
-            <div class="banner"></div>
-            <div class="container">
-                <div class="profile-card">
-                    <div class="d-flex align-items-center">
-                        <img src="./assets/images/user.jpg" alt="Profile Image" class="profile-img">
-                        <div>
-                            <h5 class="mb-1">Raquel Murillo</h5>
-                            <p class="text-muted mb-0"><i class="fas fa-map-marker-alt location-icon"></i> Phoenix, USA</p>
-                        </div>
-                    </div>
-                    <button class="btn shop-btn"><i class="fas fa-shopping-cart"></i> Shopping Now</button>
-                </div>
-        
-                <div class="row mt-4">
-                    <!-- Sidebar -->
-                    <div class="col-12 col-md-4">
-                        <div class="sidebar">
-                            <a href="#" class="sidebar-link active" data-target="account"><i class="fas fa-user me-2"></i>
-                                Account Info</a>
-                            <a href="#" class="sidebar-link" data-target="wishlist"><i class="fas fa-heart me-2"></i> Wish
-                                List</a>
-                            <a href="#" class="sidebar-link" data-target="order"><i class="fas fa-box me-2"></i> Order</a>
-                            <a href="#" class="sidebar-link" data-target="settings"><i class="fas fa-cog me-2"></i> Settings</a>
-                            <a href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
-                        </div>
-                    </div>
-        
-                    <!-- Content -->
-                    <div class="col-12 col-md-8">
-                        <div class="content">
-                            <!-- account -->
-                            <div id="account" class="section active container-fluid mt-4">
-                                <!-- Personal Info Header -->
-                                <div
-                                    class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
-                                    <h4 class="mb-2 mb-md-0">Personal Info</h4>
-                                    <button class="edit-btn btn btn-sm btn-outline-primary">Edit</button>
-                                </div>
-        
-                                <!-- Personal Info Table -->
-                                <div class="table-responsive">
-                                    <table class="table table-borderless">
-                                        <tr>
-                                            <td><span class="msc-account-details">Customer Name</span></td>
-                                            <td>Raquel Murillo</td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="msc-account-details">Mobile / Phone Number</span></td>
-                                            <td>+(253) 01234 5678</td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="msc-account-details">Email Address</span></td>
-                                            <td>raque@toner.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="msc-account-details">Location</span></td>
-                                            <td>Phoenix, USA</td>
-                                        </tr>
-                                        <tr>
-                                            <td><span class="msc-account-details">Since Member</span></td>
-                                            <td>Aug, 2022</td>
-                                        </tr>
-                                    </table>
-                                </div>
-        
-                                <!-- Address Header -->
-                                <h4 class="mt-4">Billing & Shipping Address</h4>
-        
-                                <!-- Address Cards -->
-                                <div class="row">
-                                    <!-- Home Address -->
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <div class="info-card border rounded p-3 h-100 shadow-sm">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h6>HOME ADDRESS</h6>
-                                                <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
-                                            </div>
-                                            <p><strong>Raquel Murillo</strong></p>
-                                            <p>144 Cavendish Avenue, Indianapolis, IN 46251</p>
-                                            <p>Mo. +(253) 01234 5678</p>
-                                        </div>
-                                    </div>
-        
-                                    <!-- Shipping Address -->
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <div class="info-card border rounded p-3 h-100 shadow-sm">
-                                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                                <h6>SHIPPING ADDRESS</h6>
-                                                <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
-                                            </div>
-                                            <p><strong>James Honda</strong></p>
-                                            <p>1246 Virgil Street Pensacola, FL 32501</p>
-                                            <p>Mo. +(253) 01234 5678</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <!-- withlist -->
-                            <!-- Wishlist Section -->
-                            <div id="wishlist" class="section container-fluid py-4">
-                                <div class="row justify-content-center">
-                                    <div class="col-12 col-md-10 col-lg-8 text-center">
-                                        <h4 class="mb-3">Wish List</h4>
-                                        <p class="text-muted">Your saved items will appear here.</p>
-                                    </div>
-                                </div>
-                            </div>
-        
-        
-                            <!-- order -->
-        
-                            <!-- My Orders Section -->
-                            <div id="order" class="section container-fluid py-4">
-                                <div class="row justify-content-center">
-                                    <div class="col-12">
-                                        <h4 class="mb-3">My Orders</h4>
-                                        <div class="table-responsive">
-                                            <table class="table align-middle">
-                                                <thead class="msc-product-cart-heading">
-                                                    <tr>
-                                                        <th scope="col" class="h6 text-nowrap">Order ID</th>
-                                                        <th scope="col" class="h6 text-nowrap">Product</th>
-                                                        <th scope="col" class="h6 text-nowrap">Date</th>
-                                                        <th scope="col" class="h6 text-nowrap">Total Amount</th>
-                                                        <th scope="col" class="h6 text-nowrap">Status</th>
-                                                        <th scope="col" class="h6 text-nowrap">Invoice</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <p class="mb-0 fw-semibold"><a href="#">TBT1524530</a></p>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center flex-wrap">
-                                                                <img src="./assets/images/category/-producttile-hoodies-001.png"
-                                                                    class="img-fluid rounded-3"
-                                                                    style="width: 80px; max-width: 100%; height: auto;"
-                                                                    alt="Hoodie">
-                                                                <div class="ms-3">
-                                                                    <p class="mb-0">Hoodies</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <p class="mb-0 fw-semibold text-nowrap">4 Jul, 2025</p>
-                                                        </td>
-                                                        <td>
-                                                            <p class="mb-0 fw-semibold">$500</p>
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge bg-warning text-dark">Pending</span>
-                                                        </td>
-                                                        <td>
-                                                            <p class="mb-0 fw-semibold"><a href="#">Invoice</a></p>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-        
-                            <!-- setting -->
-                            <!-- Settings Section -->
-                            <div id="settings" class="section container-fluid py-4 ">
-                                <h4 class="mb-4">Personal Details</h4>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6 mb-4">
-                                        <label class="form-label">First Name</label>
-                                        <input type="text" class="form-control custom-input-section" value="Topper girl">
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 mb-4">
-                                        <label class="form-label">Last Name</label>
-                                        <input type="text" class="form-control custom-input-section" placeholder="Enter your lastname">
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 mb-4">
-                                        <label class="form-label">Phone Number</label>
-                                        <input type="text" class="form-control custom-input-section" value="+(253) 01234 5678">
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 mb-4">
-                                        <label class="form-label">Email Address</label>
-                                        <input type="email" class="form-control custom-input-section" value="topper@gmail.com">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 mb-4">
-                                        <label class="form-label">City</label>
-                                        <input type="text" class="form-control custom-input-section" value="Bihar">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 mb-4">
-                                        <label class="form-label">Country</label>
-                                        <input type="text" class="form-control custom-input-section" value="USA">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 mb-4">
-                                        <label class="form-label">Zip Code</label>
-                                        <input type="text" class="form-control custom-input-section" value="90011">
-                                    </div>
-                                    <div class="col-12 mb-4">
-                                        <label class="form-label">Description</label>
-                                        <textarea class="form-control custom-input-section" rows="3">Hi I'm Raquel Murillo...</textarea>
-                                    </div>
-                                    <h4 class="mt-2 mb-4">Change Password</h4>
-                                    <div class="col-sm-12 col-md-4 mb-4">
-                                        <label class="form-label">Old Password*</label>
-                                        <input type="password" class="form-control custom-input-section" placeholder="Enter current password">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 mb-4">
-                                        <label class="form-label">New Password*</label>
-                                        <input type="password" class="form-control custom-input-section" placeholder="Enter new password">
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 mb-4">
-                                        <label class="form-label">Confirm Password*</label>
-                                        <input type="password" class="form-control custom-input-section" placeholder="Confirm password">
-                                    </div>
-                                    <div class="col-12">
-                                        <a href="#" class="text-decoration-none" style="color: #00A3E0;">Forgot Password?</a>
-                                    </div>
-                                </div>
-        
-                            
-                            </div>
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   
-
-
-       
-        <!-- faq section -->
-    <!-- Footer section start -->
-    <footer id="msc-footer-section" class="footer">
-        <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center text-md-start">
-              <h5>
-                <img src="./assets/images/logo.png" alt="Vistaprint" width="250" class="img-fluid" />
-              </h5>
-              <p style="font-size: 12px; color: white;">You Need It. We Print It. You Love It.</p>
-              <p style="font-size: 12px; color: white;">Regulaprints is Here to Help Every Step Of The Way.</p>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
-              <h5>Our Company</h5>
-              <p><a href="#">About Us</a></p>
-              <p><a href="#">Careers</a></p>
-              <p><a href="#">Ambassador Program</a></p>
-              <p><a href="#">For Investors</a></p>
-              <p><a href="#">For Media</a></p>
-              <p><a href="#">Sustainability</a></p>
-              <p><a href="#">Do Not Sell or Share My Info</a></p>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
-              <h5>Let Us Help</h5>
-              <p><a href="#">My Account</a></p>
-              <p><a href="#">Shipping</a></p>
-              <p><a href="#">Contact & Support</a></p>
-              <p><a href="#">All Products</a></p>
-              <p><a href="#">Ideas & Advice</a></p>
-              <p><a href="#">Reseller Program</a></p>
-              <p><a href="#">Accessibility</a></p>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
-              <h5>Contact Information</h5>
-              <div class="contact-info">
-                <div>
-                  <img src="./assets/svgicon/phone.svg" alt="" /> <span>USA Phone: (513) 334-9393</span>
-                </div>
-                <div>
-                  <img src="./assets/svgicon/whatsp.svg" alt="" /> <span>WhatsApp: (513) 334-9393</span>
-                </div>
-                <div>
-                  <img src="./assets/svgicon/email.svg" alt="" /> <span>anthony@reeflci.com</span>
-                </div>
-                <div>
-                  <img src="./assets/svgicon/location.svg" alt="" />
-                  <span>Caribbean Sea, Placencia, Belize</span>
-                </div>
-              </div>
+  <div id="user-profile-section">
+    <div class="user-profile-wrapper">
+      <div class="banner"></div>
+      <div class="container">
+        <div class="profile-card">
+          <div class="d-flex align-items-center">
+            <img src="./assets/images/user.jpg" alt="Profile Image" class="profile-img">
+            <div>
+              <h5 class="mb-1">Raquel Murillo</h5>
+              <p class="text-muted mb-0"><i class="fas fa-map-marker-alt location-icon"></i> Phoenix, USA</p>
             </div>
           </div>
-      
-          <!-- Footer Bottom Section -->
-          <section class="p-2 pt-0 text-center border-top pt-2 mt-4">
-            <div class="row d-flex align-items-center justify-content-between">
-              <div class="col-md-6 text-white text-md-start text-center mb-2 mb-md-0">
-                © 2025 Copyright:
-                <a class="text-white" href="#">regulaprints.com</a>
-              </div>
-              <div class="col-md-6 d-flex justify-content-center gap-1 text-white">
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-          </section>
+          <button class="btn shop-btn"><i class="fas fa-shopping-cart"></i> Shopping Now</button>
         </div>
-      </footer>
-      
-    <!-- Footer section end -->
-    <!-- add bootstrap js -->
-    <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('mobileSidebar');
-            sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
-        }
-    </script>
 
-<script>
+        <div class="row mt-4">
+          <!-- Sidebar -->
+          <div class="col-12 col-md-4">
+            <div class="sidebar">
+              <a href="#" class="sidebar-link active" data-target="account"><i class="fas fa-user me-2"></i>
+                Account Info</a>
+              <a href="#" class="sidebar-link" data-target="wishlist"><i class="fas fa-heart me-2"></i> Wish
+                List</a>
+              <a href="#" class="sidebar-link" data-target="order"><i class="fas fa-box me-2"></i> Order</a>
+              <a href="#" class="sidebar-link" data-target="settings"><i class="fas fa-cog me-2"></i> Settings</a>
+              <a href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="col-12 col-md-8">
+            <div class="content">
+              <!-- account -->
+              <div id="account" class="section active container-fluid mt-4">
+                <!-- Personal Info Header -->
+                <div
+                  class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
+                  <h4 class="mb-2 mb-md-0">Personal Info</h4>
+                  <button class="edit-btn btn btn-sm btn-outline-primary">Edit</button>
+                </div>
+
+                <!-- Personal Info Table -->
+                <div class="table-responsive">
+                  <table class="table table-borderless">
+                    <tr>
+                      <td><span class="msc-account-details">Customer Name</span></td>
+                      <td>Raquel Murillo</td>
+                    </tr>
+                    <tr>
+                      <td><span class="msc-account-details">Mobile / Phone Number</span></td>
+                      <td>+(253) 01234 5678</td>
+                    </tr>
+                    <tr>
+                      <td><span class="msc-account-details">Email Address</span></td>
+                      <td>raque@toner.com</td>
+                    </tr>
+                    <tr>
+                      <td><span class="msc-account-details">Location</span></td>
+                      <td>Phoenix, USA</td>
+                    </tr>
+                    <tr>
+                      <td><span class="msc-account-details">Since Member</span></td>
+                      <td>Aug, 2022</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Address Header -->
+                <h4 class="mt-4">Billing & Shipping Address</h4>
+
+                <!-- Address Cards -->
+                <div class="row">
+                  <!-- Home Address -->
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="info-card border rounded p-3 h-100 shadow-sm">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6>HOME ADDRESS</h6>
+                        <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
+                      </div>
+                      <p><strong>Raquel Murillo</strong></p>
+                      <p>144 Cavendish Avenue, Indianapolis, IN 46251</p>
+                      <p>Mo. +(253) 01234 5678</p>
+                    </div>
+                  </div>
+
+                  <!-- Shipping Address -->
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="info-card border rounded p-3 h-100 shadow-sm">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6>SHIPPING ADDRESS</h6>
+                        <button class="edit-btn btn btn-sm btn-outline-secondary">&#9998; Edit</button>
+                      </div>
+                      <p><strong>James Honda</strong></p>
+                      <p>1246 Virgil Street Pensacola, FL 32501</p>
+                      <p>Mo. +(253) 01234 5678</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- withlist -->
+              <!-- Wishlist Section -->
+              <div id="wishlist" class="section container-fluid py-4">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8 text-center">
+                    <h4 class="mb-3">Wish List</h4>
+                    <p class="text-muted">Your saved items will appear here.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- order -->
+
+              <!-- My Orders Section -->
+              <div id="order" class="section container-fluid py-4">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <h4 class="mb-3">My Orders</h4>
+                    <div class="table-responsive">
+                      <table class="table align-middle">
+                        <thead class="msc-product-cart-heading">
+                          <tr>
+                            <th scope="col" class="h6 text-nowrap">Order ID</th>
+                            <th scope="col" class="h6 text-nowrap">Product</th>
+                            <th scope="col" class="h6 text-nowrap">Date</th>
+                            <th scope="col" class="h6 text-nowrap">Total Amount</th>
+                            <th scope="col" class="h6 text-nowrap">Status</th>
+                            <th scope="col" class="h6 text-nowrap">Invoice</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <p class="mb-0 fw-semibold"><a href="#">TBT1524530</a></p>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center flex-wrap">
+                                <img src="./assets/images/category/-producttile-hoodies-001.png"
+                                  class="img-fluid rounded-3" style="width: 80px; max-width: 100%; height: auto;"
+                                  alt="Hoodie">
+                                <div class="ms-3">
+                                  <p class="mb-0">Hoodies</p>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="mb-0 fw-semibold text-nowrap">4 Jul, 2025</p>
+                            </td>
+                            <td>
+                              <p class="mb-0 fw-semibold">$500</p>
+                            </td>
+                            <td>
+                              <span class="badge bg-warning text-dark">Pending</span>
+                            </td>
+                            <td>
+                              <p class="mb-0 fw-semibold"><a href="#">Invoice</a></p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- setting -->
+              <!-- Settings Section -->
+              <div id="settings" class="section container-fluid py-4 ">
+                <h4 class="mb-4">Personal Details</h4>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 mb-4">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control custom-input-section" value="Topper girl">
+                  </div>
+                  <div class="col-sm-12 col-md-6 mb-4">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control custom-input-section" placeholder="Enter your lastname">
+                  </div>
+                  <div class="col-sm-12 col-md-6 mb-4">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" class="form-control custom-input-section" value="+(253) 01234 5678">
+                  </div>
+                  <div class="col-sm-12 col-md-6 mb-4">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control custom-input-section" value="topper@gmail.com">
+                  </div>
+                  <div class="col-sm-12 col-md-4 mb-4">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control custom-input-section" value="Bihar">
+                  </div>
+                  <div class="col-sm-12 col-md-4 mb-4">
+                    <label class="form-label">Country</label>
+                    <input type="text" class="form-control custom-input-section" value="USA">
+                  </div>
+                  <div class="col-sm-12 col-md-4 mb-4">
+                    <label class="form-label">Zip Code</label>
+                    <input type="text" class="form-control custom-input-section" value="90011">
+                  </div>
+                  <div class="col-12 mb-4">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control custom-input-section" rows="3">Hi I'm Raquel Murillo...</textarea>
+                  </div>
+                  <h4 class="mt-2 mb-4">Change Password</h4>
+                  <div class="col-sm-12 col-md-4 mb-4">
+                    <label class="form-label">Old Password*</label>
+                    <input type="password" class="form-control custom-input-section"
+                      placeholder="Enter current password">
+                  </div>
+                  <div class="col-sm-12 col-md-4 mb-4">
+                    <label class="form-label">New Password*</label>
+                    <input type="password" class="form-control custom-input-section" placeholder="Enter new password">
+                  </div>
+                  <div class="col-sm-12 col-md-4 mb-4">
+                    <label class="form-label">Confirm Password*</label>
+                    <input type="password" class="form-control custom-input-section" placeholder="Confirm password">
+                  </div>
+                  <div class="col-12">
+                    <a href="#" class="text-decoration-none" style="color: #00A3E0;">Forgot Password?</a>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- faq section -->
+  <!-- Footer section start -->
+  <footer id="msc-footer-section" class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 text-center text-md-start">
+          <h5>
+            <img src="./assets/images/logo.png" alt="Vistaprint" width="250" class="img-fluid" />
+          </h5>
+          <p style="font-size: 12px; color: white;">You Need It. We Print It. You Love It.</p>
+          <p style="font-size: 12px; color: white;">Regulaprints is Here to Help Every Step Of The Way.</p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+          <h5>Our Company</h5>
+          <p><a href="#">About Us</a></p>
+          <p><a href="#">Careers</a></p>
+          <p><a href="#">Ambassador Program</a></p>
+          <p><a href="#">For Investors</a></p>
+          <p><a href="#">For Media</a></p>
+          <p><a href="#">Sustainability</a></p>
+          <p><a href="#">Do Not Sell or Share My Info</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+          <h5>Let Us Help</h5>
+          <p><a href="#">My Account</a></p>
+          <p><a href="#">Shipping</a></p>
+          <p><a href="#">Contact & Support</a></p>
+          <p><a href="#">All Products</a></p>
+          <p><a href="#">Ideas & Advice</a></p>
+          <p><a href="#">Reseller Program</a></p>
+          <p><a href="#">Accessibility</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 msc-footer-heading text-center text-md-start">
+          <h5>Contact Information</h5>
+          <div class="contact-info">
+            <div>
+              <img src="./assets/svgicon/phone.svg" alt="" /> <span>USA Phone: (513) 334-9393</span>
+            </div>
+            <div>
+              <img src="./assets/svgicon/whatsp.svg" alt="" /> <span>WhatsApp: (513) 334-9393</span>
+            </div>
+            <div>
+              <img src="./assets/svgicon/email.svg" alt="" /> <span>anthony@reeflci.com</span>
+            </div>
+            <div>
+              <img src="./assets/svgicon/location.svg" alt="" />
+              <span>Caribbean Sea, Placencia, Belize</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <section class="p-2 pt-0 text-center border-top pt-2 mt-4">
+        <div class="row d-flex align-items-center justify-content-between">
+          <div class="col-md-6 text-white text-md-start text-center mb-2 mb-md-0">
+            © 2025 Copyright:
+            <a class="text-white" href="#">regulaprints.com</a>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center gap-1 text-white">
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <!-- Footer section end -->
+  <!-- add bootstrap js -->
+  <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('mobileSidebar');
+      sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+    }
+  </script>
+
+  <script>
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 6,
       spaceBetween: 10,
@@ -718,26 +739,26 @@
       },
     });
   </script>
-    <script>
-        const sidebarLinks = document.querySelectorAll('.sidebar-link');
-        const sections = document.querySelectorAll('.section');
+  <script>
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const sections = document.querySelectorAll('.section');
 
-        sidebarLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                sidebarLinks.forEach(item => item.classList.remove('active'));
-                this.classList.add('active');
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        sidebarLinks.forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
 
-                const target = this.getAttribute('data-target');
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                    if (section.id === target) {
-                        section.classList.add('active');
-                    }
-                });
-            });
+        const target = this.getAttribute('data-target');
+        sections.forEach(section => {
+          section.classList.remove('active');
+          if (section.id === target) {
+            section.classList.add('active');
+          }
         });
-    </script>
+      });
+    });
+  </script>
 </body>
 
 </html>

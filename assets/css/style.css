@@ -197,8 +197,16 @@
   .msc-icon-btn:hover {
     color: var(--msc-secondary-color);
   }
-  
-  
+  @media (max-width: 768px) {
+    .search-box input{
+        padding: 4px !important;
+        font-size: 12px !important;
+    }
+    .search-box .search-btn img{
+        height: 14px !important;
+    }
+}
+
 /* nav bar end */
 /* Top header offer section */
 #msc-top-header-offer-section {
@@ -403,7 +411,7 @@
         margin-top: 2rem !important;
     }
     #msc-category-offer-section{
-        margin-top: 2rem !important;
+        margin-top: 1rem !important;
     }
     #msc-explore-all-category-section{
         margin-top: 2rem !important;
