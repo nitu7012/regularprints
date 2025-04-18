@@ -16,12 +16,16 @@
     }
 
     .hero-section {
-      background: url('./assets/images/bg.png') no-repeat center center;
-      background-size: cover;
-      color: white;
-      padding: 80px 0;
       position: relative;
+      color: white;
+      padding: 60px 0;
+      background: linear-gradient(rgba(28, 37, 38, 0.8),
+          rgba(28, 37, 38, 0.8)),
+        url('./assets/images/bg.jpg') no-repeat center center;
+      background-size: cover;
+      z-index: 1;
     }
+
 
     .breadcrumb .breadcrumb-item a,
     .breadcrumb .breadcrumb-item.active {
@@ -228,7 +232,7 @@
       }
 
       #msc-product-details-section {
-        padding: 10px  !important;
+        padding: 10px !important;
         margin: 0 !important;
       }
 
@@ -284,8 +288,8 @@
     <!-- Mobile & Tablet Header -->
     <section class="d-flex d-md-none p-2 justify-content-between align-items-center">
       <!-- Left: Justify + Logo -->
-      
-       </div>
+
+      </div>
       <div class="d-flex align-items-center gap-2">
         <button class="btn p-0" onclick="toggleSidebar()" style="color: black; font-size: 16px;">
           <i class="fas fa-bars fs-4"></i>
@@ -351,14 +355,12 @@
                 <i class="fa-solid fa-bag-shopping"></i> <!-- Bag -->
               </a>
             </div>
-            
+
             <div class="col-md-2">
               <div class="col-md-6 d-flex justify-content-center gap-2 text-white">
-                <a class="msc-icon-btn" href="#!" role="button"><i
-                    class="fab fa-facebook-f"></i></a>
+                <a class="msc-icon-btn" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
                 <a class="msc-icon-btn" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-                <a class="msc-icon-btn" href="#!" role="button"><i
-                    class="fab fa-instagram"></i></a>
+                <a class="msc-icon-btn" href="#!" role="button"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -719,8 +721,10 @@
           <h5>
             <img src="./assets/images/logo.png" alt="Vistaprint" width="250" class="img-fluid" />
           </h5>
-          <p style="font-size: 12px; color: white;" class="msc-footer-top-des">You Need It. We Print It. You Love It.</p>
-          <p style="font-size: 12px; color: white;" class="msc-footer-top-des">Regulaprints is Here to Help Every Step Of The Way.</p>
+          <p style="font-size: 12px; color: white;" class="msc-footer-top-des">You Need It. We Print It. You Love It.
+          </p>
+          <p style="font-size: 12px; color: white;" class="msc-footer-top-des">Regulaprints is Here to Help Every Step
+            Of The Way.</p>
         </div>
 
         <div class="col-lg-3 col-md-6 col-s2 msc-footer-heading text-center text-md-start">
@@ -751,7 +755,7 @@
             <div class="msc-contact-des">
               <img src="./assets/svgicon/phone.svg" alt="" /> <span>USA Phone: (513) 334-9393</span>
             </div>
-            <div class="msc-contact-des" >
+            <div class="msc-contact-des">
               <img src="./assets/svgicon/whatsp.svg" alt="" /> <span>WhatsApp: (513) 334-9393</span>
             </div>
             <div class="msc-contact-des">
@@ -785,7 +789,7 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  
+
 
   <!-- Footer section end -->
   <!-- add bootstrap js -->
